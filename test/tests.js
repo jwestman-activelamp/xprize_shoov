@@ -47,7 +47,7 @@ describe('Search engine tests', function() {
 
   it('should show the xprize.org page',function(done) {
     client
-      .url('https://xprize.org/')
+      .url('http://xprize.org/')
       .webdrivercss(testName, {
         name: 'xprize'
       }, shoovWebdrivercss.processResults)
@@ -55,11 +55,11 @@ describe('Search engine tests', function() {
 
   });
 
-  it('should show the xprize news page',function(done) {
+  it('should show the xprize who we are page',function(done) {
     client
-      .url('https://xprize.org/news')
+      .url('http://xprize.org/about/who-we-are')
       .webdrivercss(testName, {
-        name: 'xprizenews'
+        name: 'xprizewhoweare'
       }, shoovWebdrivercss.processResults)
       .call(done);
 
