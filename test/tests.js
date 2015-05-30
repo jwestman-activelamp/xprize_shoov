@@ -45,11 +45,11 @@ describe('Search engine tests', function() {
     shoovWebdrivercss.after(done);
   });
 
-  it('should show the Google main search page',function(done) {
+  it('should show the xprize.org page',function(done) {
     client
-      .url('https://www.google.com/?gfe_rd=cr&ei=ku8bVbG3K-SG8QeFmICQDg&gws_rd=cr&fg=1')
+      .url('https://xprize.local/')
       .webdrivercss(testName, {
-        name: 'google'
+        name: 'xprize'
       }, shoovWebdrivercss.processResults)
       .call(done);
 
