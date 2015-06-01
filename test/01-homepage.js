@@ -50,7 +50,7 @@ describe('XPRIZE Tests', function() {
       .url('http://xprize.org/')
       .webdrivercss(testName, {
         name: 'xprize',
-        exclude: ['.views-field-field-featured-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list',{x0:57, y0:1495, x1:704, y1: 1574},{x0: 122, y0: 1621, x1: 306, y1: 1649},{x0: 456, y0: 1621, x1: 638, y1: 1649},{x0: 122, y0: 1728, x1: 306, y1: 1754},{x0: 456, y0: 1728, x1: 638, y1: 1754},'.social-stream__status', '.media-mentions']
+        exclude: ['.views-field-field-featured-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
       }, shoovWebdrivercss.processResults)
       .call(done);
   });
