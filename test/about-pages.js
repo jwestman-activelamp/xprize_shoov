@@ -96,6 +96,16 @@ describe('XPRIZE About Page Tests', function() {
             .call(done);
     });
 
+    it('should show the media room: Executive Bios: Peter H Diamandis M.D. page',function(done) {
+        client
+            .url('http://xprize.org/about/staff/peter-h-diamandis-md')
+            .webdrivercss(testName, {
+                name: 'xprize--about--media-room--peter-h-diamandis-md',
+                exclude: ['.social-stream__status']
+            }, shoovWebdrivercss.processResults)
+            .call(done);
+    });
+
     it('should show the media room: Photo Gallery page',function(done) {
         client
             .url('http://xprize.org/about/media-room/photo-gallery')
