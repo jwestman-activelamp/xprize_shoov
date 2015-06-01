@@ -32,7 +32,7 @@ var caps = selectedCaps ? capsConfig[selectedCaps] : undefined;
 var providerPrefix = process.env.PROVIDER_PREFIX ? process.env.PROVIDER_PREFIX + '-' : '';
 var testName = selectedCaps ? providerPrefix + selectedCaps : providerPrefix + 'default';
 
-describe('Search engine tests', function() {
+describe('XPRIZE Tests', function() {
 
   this.timeout(99999999);
   var client = {};
@@ -49,7 +49,8 @@ describe('Search engine tests', function() {
     client
       .url('http://xprize.org/')
       .webdrivercss(testName, {
-        name: 'xprize'
+        name: 'xprize',
+        exclude: ['.social-stream__status', '.media-mentions']
       }, shoovWebdrivercss.processResults)
       .call(done);
 
@@ -59,7 +60,8 @@ describe('Search engine tests', function() {
     client
       .url('http://xprize.org/about/who-we-are')
       .webdrivercss(testName, {
-        name: 'xprizewhoweare'
+        name: 'xprize-who-we-are',
+        exclude: ['.social-stream__status']
       }, shoovWebdrivercss.processResults)
       .call(done);
 
