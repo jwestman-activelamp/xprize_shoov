@@ -57,7 +57,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
 
     it('should show the news: blog article page',function(done) {
         client
-            .url('http://xprize.org/news/blog/kaunertal-then-moon-august-alps-test-puli')
+            .url('http://lunar.xprize.org/news/blog/kaunertal-then-moon-august-alps-test-puli')
             .webdrivercss(testName, {
                 name: 'xprize--news--blog--kaunertal',
                 exclude: ['.social-stream__status', '.pane-disqus-disqus-comments']
@@ -67,7 +67,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
 
     it('should show the news: press release page',function(done) {
         client
-            .url('http://xprize.org/news/press-release/disney-and-xprize-select-winning-innovators-of-tomorrow')
+            .url('http://xprize.org/press-release/disney-and-xprize-select-winning-innovators-of-tomorrow')
             .webdrivercss(testName, {
                 name: 'xprize--news--press-release--disney-and-xprize',
                 exclude: ['.social-stream__status']
