@@ -55,15 +55,4 @@ describe('XPRIZE Tests', function() {
       .call(done);
 
   });
-
-  it('should show the xprize who we are page',function(done) {
-    client
-      .url('http://xprize.org/about/who-we-are')
-      .webdrivercss(testName, {
-        name: 'xprize-who-we-are',
-        exclude: ['.social-stream__status']
-      }, shoovWebdrivercss.processResults)
-      .call(done);
-
-  });
 });
