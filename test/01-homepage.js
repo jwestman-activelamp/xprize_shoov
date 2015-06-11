@@ -2,6 +2,24 @@
 
 var shoovWebdrivercss = require('shoov-webdrivercss');
 
+// Pass the environment key into mocha
+// env KEY=local mocha
+var key;
+switch (process.env.KEY) {
+  case "local":
+    key = "http://xprize.local/";
+    break;
+  case "dev":
+    key = "http://xprize:version3@dev2.xprize.org/";
+    break;
+  case "stage":
+    key = "http://xprize:version3@stage2.xprize.org/";
+    break;
+  default:
+    key = "http://xprize.org/";
+    break;
+}
+
 // This is an example assuming BrowserStack is used, as the capabilities are
 // encoded in the way their system is using.
 // See https://www.browserstack.com/automate/node
@@ -47,7 +65,7 @@ describe('XPRIZE Tests', function() {
 
   it('should show the xprize.org page',function(done) {
     client
-      .url('http://xprize.org/')
+      .url(key)
       .webdrivercss(testName, {
         name: 'xprize',
         exclude: ['.views-field-field-featured-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']

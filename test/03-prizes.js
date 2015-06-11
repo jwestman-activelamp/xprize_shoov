@@ -2,6 +2,24 @@
 
 var shoovWebdrivercss = require('shoov-webdrivercss');
 
+// Pass the environment key into mocha
+// env KEY=local mocha
+var key;
+switch (process.env.KEY) {
+  case "local":
+    key = "http://xprize.local/";
+    break;
+  case "dev":
+    key = "http://xprize:version3@dev2.xprize.org/";
+    break;
+  case "stage":
+    key = "http://xprize:version3@stage2.xprize.org/";
+    break;
+  default:
+    key = "http://xprize.org/";
+    break;
+}
+
 // This is an example assuming BrowserStack is used, as the capabilities are
 // encoded in the way their system is using.
 // See https://www.browserstack.com/automate/node
@@ -47,7 +65,7 @@ describe('XPRIZE Prizes Page Tests', function() {
 
     it('should show the prizes page',function(done) {
         client
-            .url('http://xprize.org/prizes')
+            .url(key+'prizes')
             .webdrivercss(testName, {
                 name: 'xprize--prizes',
                 exclude: ['.social-stream__status']
@@ -57,7 +75,7 @@ describe('XPRIZE Prizes Page Tests', function() {
 
     it('should show the future prizes page',function(done) {
         client
-            .url('http://xprize.org/prizes/future-prizes')
+            .url(key+'prizes/future-prizes')
             .webdrivercss(testName, {
                 name: 'xprize--prizes--future-prizes'
             }, shoovWebdrivercss.processResults)
@@ -66,7 +84,7 @@ describe('XPRIZE Prizes Page Tests', function() {
 
     it('should show the future prizes: AI prize presented by TED page',function(done) {
         client
-            .url('http://xprize.org/prizes/future-prizes/ai-xprize-presented-ted')
+            .url(key+'prizes/future-prizes/ai-xprize-presented-ted')
             .webdrivercss(testName, {
                 name: 'xprize--prizes--future-prizes-ai-xprize-presented-ted',
                 exclude: ['.prize-voting--rating-count','.pane-disqus-disqus-comments','.social-stream__status']

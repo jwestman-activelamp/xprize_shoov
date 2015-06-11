@@ -2,6 +2,24 @@
 
 var shoovWebdrivercss = require('shoov-webdrivercss');
 
+// Pass the environment key into mocha
+// env KEY=local mocha
+var key;
+switch (process.env.KEY) {
+  case "local":
+    key = "http://xprize.local/";
+    break;
+  case "dev":
+    key = "http://xprize:version3@dev2.xprize.org/";
+    break;
+  case "stage":
+    key = "http://xprize:version3@stage2.xprize.org/";
+    break;
+  default:
+    key = "http://xprize.org/";
+    break;
+}
+
 // This is an example assuming BrowserStack is used, as the capabilities are
 // encoded in the way their system is using.
 // See https://www.browserstack.com/automate/node
@@ -47,7 +65,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
 
     it('should show the benefactors page',function(done) {
         client
-            .url('http://xprize.org/benefactors')
+            .url(key+'benefactors')
             .webdrivercss(testName, {
                 name: 'xprize--benefactors',
                 exclude: ['.social-stream__status']
@@ -57,7 +75,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
 
     it('should show the benefactors: Vision Circle page',function(done) {
         client
-            .url('http://xprize.org/benefactors/vision-circle')
+            .url(key+'benefactors/vision-circle')
             .webdrivercss(testName, {
                 name: 'xprize--benefactors--vision-circle',
                 exclude: ['.social-stream__status']
@@ -67,7 +85,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
 
     it('should show the benefactors: Innovation Board page',function(done) {
         client
-            .url('http://xprize.org/benefactors/innovation-board')
+            .url(key+'benefactors/innovation-board')
             .webdrivercss(testName, {
                 name: 'xprize--benefactors--innovation-board',
                 exclude: ['.social-stream__status']
@@ -77,7 +95,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
 
     it('should show the benefactors: Spirit of Innovation page',function(done) {
         client
-            .url('http://xprize.org/benefactors/spirit-of-innovation')
+            .url(key+'benefactors/spirit-of-innovation')
             .webdrivercss(testName, {
                 name: 'xprize--benefactors--spirit-of-innovation',
                 exclude: ['.social-stream__status']
@@ -87,7 +105,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
 
     it('should show the benefactors: Entrepreneurs Circle  page',function(done) {
         client
-            .url('http://xprize.org/content/entrepreneurs-circle')
+            .url(key+'content/entrepreneurs-circle')
             .webdrivercss(testName, {
                 name: 'xprize--benefactors--entrepreneurs-circle',
                 exclude: ['.social-stream__status']

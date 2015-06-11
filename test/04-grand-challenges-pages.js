@@ -2,6 +2,24 @@
 
 var shoovWebdrivercss = require('shoov-webdrivercss');
 
+// Pass the environment key into mocha
+// env KEY=local mocha
+var key;
+switch (process.env.KEY) {
+  case "local":
+    key = "http://xprize.local/";
+    break;
+  case "dev":
+    key = "http://xprize:version3@dev2.xprize.org/";
+    break;
+  case "stage":
+    key = "http://xprize:version3@stage2.xprize.org/";
+    break;
+  default:
+    key = "http://xprize.org/";
+    break;
+}
+
 // This is an example assuming BrowserStack is used, as the capabilities are
 // encoded in the way their system is using.
 // See https://www.browserstack.com/automate/node
@@ -47,7 +65,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges')
+            .url(key+'grand-challenges')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges'
             }, shoovWebdrivercss.processResults)
@@ -56,7 +74,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges: Energy and Environment Group page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges/energy-environment')
+            .url(key+'grand-challenges/energy-environment')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges--energy-environment',
                 exclude: ['.social-stream__status']
@@ -66,7 +84,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges: Exploration Group page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges/exploration')
+            .url(key+'grand-challenges/exploration')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges--exploration',
                 exclude: ['.social-stream__status']
@@ -76,7 +94,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges: Global Development Group page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges/global-development')
+            .url(key+'grand-challenges/global-development')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges--global-developmentt',
                 exclude: ['.social-stream__status']
@@ -86,7 +104,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges: Learning Group page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges/learning')
+            .url(key+'grand-challenges/learning')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges--learning',
                 exclude: ['.social-stream__status']
@@ -96,7 +114,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges: Life Sciences Group page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges/life-sciences')
+            .url(key+'grand-challenges/life-sciences')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges--life-sciences',
                 exclude: ['.social-stream__status']
@@ -106,7 +124,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
 
     it('should show the grand challenges: Vote page',function(done) {
         client
-            .url('http://xprize.org/grand-challenges/vote')
+            .url(key+'grand-challenges/vote')
             .webdrivercss(testName, {
                 name: 'xprize--grand-challenges--vote'
             }, shoovWebdrivercss.processResults)
