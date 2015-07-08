@@ -68,6 +68,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .url(key+'prizes')
             .webdrivercss(testName, {
                 name: 'xprize--prizes',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -77,7 +78,9 @@ describe('XPRIZE Prizes Page Tests', function() {
         client
             .url(key+'prizes/future-prizes')
             .webdrivercss(testName, {
-                name: 'xprize--prizes--future-prizes'
+                name: 'xprize--prizes--future-prizes',
+                remove: ['.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                exclude: ['.star-rating']
             }, shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -87,6 +90,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .url(key+'prizes/future-prizes/ai-xprize-presented-ted')
             .webdrivercss(testName, {
                 name: 'xprize--prizes--future-prizes-ai-xprize-presented-ted',
+                remove: ['.social-stream__status','.pane-disqus-disqus-comments'],
                 exclude: ['.prize-voting--rating-count','.pane-disqus-disqus-comments','.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);

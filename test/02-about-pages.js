@@ -68,7 +68,8 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about')
             .webdrivercss(testName, {
                 name: 'xprize-about',
-                exclude: [{x0: 52, y0: 1726, x1: 335, y1: 2161}, {x0: 372, y0: 1726, x1: 653, y1: 2161}, '.social-stream__status']
+                remove: ['.social-stream__status', '.upcoming-events__event'],
+                exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
 
@@ -79,6 +80,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/who-we-are')
             .webdrivercss(testName, {
                 name: 'xprize--about--who-we-are',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -89,6 +91,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/what-is-an-xprize')
             .webdrivercss(testName, {
                 name: 'xprize--about--what-is-an-xprize',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -99,6 +102,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/media-room')
             .webdrivercss(testName, {
                 name: 'xprize--about--media-room',
+                remove: ['.social-stream__status', 'latest-news--list'],
                 exclude: ['latest-news--list', '.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -109,6 +113,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/media-room/executive-bios')
             .webdrivercss(testName, {
                 name: 'xprize--about--media-room--executive-bios',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -119,6 +124,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/staff/peter-h-diamandis-md')
             .webdrivercss(testName, {
                 name: 'xprize--about--media-room--peter-h-diamandis-md',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -138,6 +144,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/media-room/xprize-press-kit')
             .webdrivercss(testName, {
                 name: 'xprize--about--media-room--xprize-press-kit',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -157,6 +164,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/media-room/story-ideas')
             .webdrivercss(testName, {
                 name: 'xprize--about--media-room--story-ideas',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -167,6 +175,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/board-of-trustees')
             .webdrivercss(testName, {
                 name: 'xprize--about--board-of-trustees',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -177,6 +186,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/board-of-trustees/eric-c-anderson')
             .webdrivercss(testName, {
                 name: 'xprize--about--board-of-trustees--eric-c-anderson',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -187,6 +197,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/foundation-partners-sponsors')
             .webdrivercss(testName, {
                 name: 'xprize--about--foundation-partners-sponsors',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -197,6 +208,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/government-partners')
             .webdrivercss(testName, {
                 name: 'xprize--about--government-partners',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -207,6 +219,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/xprize-in-india')
             .webdrivercss(testName, {
                 name: 'xprize--about--xprize-in-india',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -217,6 +230,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/staff')
             .webdrivercss(testName, {
                 name: 'xprize--about--staff',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -227,6 +241,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/staff/jono-bacon')
             .webdrivercss(testName, {
                 name: 'xprize--about--staff--jono-bacon',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -237,6 +252,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/education')
             .webdrivercss(testName, {
                 name: 'xprize--about--education',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -247,6 +263,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/education/fll')
             .webdrivercss(testName, {
                 name: 'xprize--about--education--ffl',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -257,6 +274,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/event-calendar')
             .webdrivercss(testName, {
                 name: 'xprize--about--event-calendar',
+                remove: ['.social-stream__status'],
                 exclude: ['.view-upcoming-events.event-calendar','.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -267,6 +285,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/careers')
             .webdrivercss(testName, {
                 name: 'xprize--about--careers',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -277,6 +296,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/careers/who-we-are')
             .webdrivercss(testName, {
                 name: 'xprize--about--careers--who-we-are',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -287,6 +307,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/careers/what-we-do')
             .webdrivercss(testName, {
                 name: 'xprize--about--careers--what-we-do',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);
@@ -297,6 +318,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(key+'about/careers/join-our-team')
             .webdrivercss(testName, {
                 name: 'xprize--about--careers--join-our-team',
+                remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, shoovWebdrivercss.processResults)
             .call(done);

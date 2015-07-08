@@ -68,7 +68,8 @@ describe('XPRIZE Tests', function() {
       .url(key)
       .webdrivercss(testName, {
         name: 'xprize',
-        exclude: ['.views-field-field-featured-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
+        remove: ['.social-stream__status','.prizes--list__leaderboard .latest-news--list'],
+        exclude: ['.hero-slider__img','.views-field-field-hero-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
       }, shoovWebdrivercss.processResults)
       .call(done);
   });
