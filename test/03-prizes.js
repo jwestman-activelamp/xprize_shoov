@@ -43,7 +43,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes--future-prizes-ai-xprize-presented-ted',
                 remove: ['.social-stream__status','.pane-disqus-disqus-comments'],
-                exclude: ['.prize-voting--rating-count','.pane-disqus-disqus-comments','.social-stream__status']
+                exclude: ['.related-post__block','.prize-voting--rating-count','.pane-disqus-disqus-comments','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

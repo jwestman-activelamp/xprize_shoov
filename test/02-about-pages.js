@@ -54,8 +54,8 @@ describe('XPRIZE About Page Tests', function() {
             .url(appConfig.mkey+'about/media-room')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room',
-                remove: ['.social-stream__status', 'latest-news--list'],
-                exclude: ['latest-news--list', '.social-stream__status']
+                remove: ['.social-stream__status', '.latest-news--list'],
+                exclude: ['.latest-news--list', '.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
