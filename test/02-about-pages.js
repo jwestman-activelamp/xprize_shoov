@@ -122,11 +122,11 @@ describe('XPRIZE About Page Tests', function() {
             .call(done);
     });
 
-    it('should show the board of trustees page',function(done) {
+    it('should show the our board page',function(done) {
         client
-            .url(appConfig.mkey+'about/board-of-trustees')
+            .url(appConfig.mkey+'about/our-board')
             .webdrivercss(appConfig.testName, {
-                name: 'xprize--about--board-of-trustees',
+                name: 'xprize--about--our-board',
                 remove: ['.social-stream__status'],
                 exclude: ['.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
