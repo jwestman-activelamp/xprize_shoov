@@ -21,7 +21,7 @@ describe('XPRIZE Get Involved Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--get-involved',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status', '.latest-tweets--message','.pds-question-top', '.pds-answer-span']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.latest-tweets--message','.pds-question-top', '.pds-answer-span']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -41,7 +41,7 @@ describe('XPRIZE Get Involved Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--get-involved--newsletter-signup',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

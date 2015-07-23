@@ -20,7 +20,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .url(appConfig.mkey+'news')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news',
-                exclude: ['#news-items']
+                exclude: ['#main-navigation','#mini-panel-footer_section','#news-items']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -31,7 +31,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--blog--kaunertal',
                 remove: ['.social-stream__status', '.pane-disqus-disqus-comments'],
-                exclude: ['.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -42,7 +42,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--press-release--disney-and-xprize',
                 remove: ['.social-stream__status'],
-                exclude: ['.pane-disqus-disqus-comments','.related-post__block','.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.pane-disqus-disqus-comments','.related-post__block','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -53,7 +53,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--can-your-city-commit',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -64,7 +64,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--ideas--visioneering',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -75,7 +75,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--ideas--visioneering--2014',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -86,7 +86,7 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--ideas--visioneering--2013',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

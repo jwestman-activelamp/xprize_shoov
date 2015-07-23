@@ -21,7 +21,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize-about',
                 remove: ['.social-stream__status', '.upcoming-events__event'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
 
@@ -33,7 +33,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--who-we-are',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -44,7 +44,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--what-is-an-xprize',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -55,7 +55,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room',
                 remove: ['.social-stream__status', '.latest-news--list'],
-                exclude: ['.latest-news--list', '.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list', '.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -66,7 +66,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room--executive-bios',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -77,7 +77,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room--peter-h-diamandis-md',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -97,7 +97,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room--xprize-press-kit',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -117,7 +117,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room--story-ideas',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -128,7 +128,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--our-board',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -139,7 +139,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--board-of-trustees--eric-c-anderson',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -150,7 +150,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--foundation-partners-sponsors',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -161,7 +161,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--government-partners',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -172,7 +172,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--xprize-in-india',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -183,7 +183,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--staff',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -194,7 +194,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--staff--jono-bacon',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -205,7 +205,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--education',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -216,7 +216,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--education--ffl',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -227,7 +227,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--event-calendar',
                 remove: ['.social-stream__status'],
-                exclude: ['.view-upcoming-events.event-calendar','.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.view-upcoming-events.event-calendar','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -238,7 +238,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--careers',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -249,7 +249,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--careers--who-we-are',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -260,7 +260,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--careers--what-we-do',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -271,7 +271,7 @@ describe('XPRIZE About Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--careers--join-our-team',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

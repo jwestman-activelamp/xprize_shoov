@@ -21,7 +21,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -32,7 +32,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes--future-prizes',
                 remove: ['.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
-                exclude: ['.star-rating']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -43,7 +43,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes--future-prizes-ai-xprize-presented-ted',
                 remove: ['.social-stream__status','.pane-disqus-disqus-comments'],
-                exclude: ['.related-post__block','.prize-voting--rating-count','.pane-disqus-disqus-comments','.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.related-post__block','.prize-voting--rating-count','.pane-disqus-disqus-comments','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

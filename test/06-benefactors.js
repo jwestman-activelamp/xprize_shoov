@@ -21,7 +21,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -32,7 +32,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--vision-circle',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -43,7 +43,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--innovation-board',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -54,7 +54,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--spirit-of-innovation',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -65,7 +65,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--entrepreneurs-circle',
                 remove: ['.social-stream__status'],
-                exclude: ['.social-stream__status']
+                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

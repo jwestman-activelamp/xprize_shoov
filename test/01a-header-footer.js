@@ -15,13 +15,22 @@ describe('XPRIZE Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the xprize.org page',function(done) {
+  it('should show the xprize.org header',function(done) {
     client
       .url(appConfig.mkey)
       .webdrivercss(appConfig.testName, {
-        name: 'xprize',
-        remove: ['.social-stream__status','.prizes--list__leaderboard .latest-news--list'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.hero-slider__img','.views-field-field-hero-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
+        name: 'header',
+        elem: '#main-navigation'
+      }, appConfig.shoovWebdrivercss.processResults)
+      .call(done);
+  });
+
+  it('should show the xprize.org footer',function(done) {
+    client
+      .url(appConfig.mkey)
+      .webdrivercss(appConfig.testName, {
+        name: 'footer',
+        elem: '#mini-panel-footer_section'
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
