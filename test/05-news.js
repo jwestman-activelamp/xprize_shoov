@@ -58,36 +58,4 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .call(done);
     });
 
-    it('should show the visioneering page',function(done) {
-        client
-            .url(appConfig.mkey+'ideas/visioneering')
-            .webdrivercss(appConfig.testName, {
-                name: 'xprize--ideas--visioneering',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
-            }, appConfig.shoovWebdrivercss.processResults)
-            .call(done);
-    });
-
-    it('should show the visioneering 2014 page',function(done) {
-        client
-            .url(appConfig.mkey+'ideas/visioneering/2014')
-            .webdrivercss(appConfig.testName, {
-                name: 'xprize--ideas--visioneering--2014',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
-            }, appConfig.shoovWebdrivercss.processResults)
-            .call(done);
-    });
-
-    it('should show the visioneering 2013 page',function(done) {
-        client
-            .url(appConfig.mkey+'content/visioneering-2013')
-            .webdrivercss(appConfig.testName, {
-                name: 'xprize--ideas--visioneering--2013',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
-            }, appConfig.shoovWebdrivercss.processResults)
-            .call(done);
-    });
 });

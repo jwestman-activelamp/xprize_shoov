@@ -19,7 +19,8 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
         client
             .url(appConfig.mkey+'grand-challenges')
             .webdrivercss(appConfig.testName, {
-                name: 'xprize--grand-challenges'
+                name: 'xprize--grand-challenges',
+            exclude: ['#main-navigation','#mini-panel-footer_section']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -79,13 +80,4 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .call(done);
     });
 
-    it('should show the grand challenges: Vote page',function(done) {
-        client
-            .url(appConfig.mkey+'grand-challenges/vote')
-            .webdrivercss(appConfig.testName, {
-                name: 'xprize--grand-challenges--vote',
-                exclude: ['#main-navigation','#mini-panel-footer_section','.rating-icons']
-            }, appConfig.shoovWebdrivercss.processResults)
-            .call(done);
-    });
 });
