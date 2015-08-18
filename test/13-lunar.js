@@ -171,6 +171,18 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
+
+  it('should show the news: lunar blog article page',function(done) {
+    client
+      .url(appConfig.mkey+'news/blog/kaunertal-then-moon-august-alps-test-puli')
+      .webdrivercss(appConfig.testName, {
+        name: 'xprize--lunar--news--blog--kaunertal',
+        remove: ['.social-stream__status', '.pane-disqus-disqus-comments'],
+        exclude: ['#main-navigation','#mini-panel-footer_section','.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments']
+      }, appConfig.shoovWebdrivercss.processResults)
+      .call(done);
+  });
+
   // Teams Pages
 
   it('should show the Google Lunar teams page',function(done) {

@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-describe('XPRIZE Ideas and Innovation Tests', function() {
+describe('XPRIZE News Tests', function() {
 
     this.timeout(99999999);
     var client = {};
@@ -21,17 +21,6 @@ describe('XPRIZE Ideas and Innovation Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news',
                 exclude: ['#main-navigation','#mini-panel-footer_section','#news-items']
-            }, appConfig.shoovWebdrivercss.processResults)
-            .call(done);
-    });
-
-    it('should show the news: blog article page',function(done) {
-        client
-            .url(appConfig.mkey+'news/blog/kaunertal-then-moon-august-alps-test-puli')
-            .webdrivercss(appConfig.testName, {
-                name: 'xprize--news--blog--kaunertal',
-                remove: ['.social-stream__status', '.pane-disqus-disqus-comments'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
