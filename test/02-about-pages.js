@@ -86,8 +86,9 @@ describe('XPRIZE About Page Tests', function() {
         client
             .url(appConfig.mkey+'about/media-room/photo-gallery')
             .webdrivercss(appConfig.testName, {
-                name: 'xprize--about--media-room--photo-gallery'
-            }, appConfig.shoovWebdrivercss.processResults)
+                name: 'xprize--about--media-room--photo-gallery',
+                exclude: ['#main-navigation','#mini-panel-footer_section']
+          }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
 
@@ -106,8 +107,9 @@ describe('XPRIZE About Page Tests', function() {
         client
             .url(appConfig.mkey+'about/media-room/video-gallery')
             .webdrivercss(appConfig.testName, {
-                name: 'xprize--about--media-room--video-gallery'
-            }, appConfig.shoovWebdrivercss.processResults)
+                name: 'xprize--about--media-room--video-gallery',
+                exclude: ['#main-navigation','#mini-panel-footer_section']
+          }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
 
@@ -280,7 +282,8 @@ describe('XPRIZE About Page Tests', function() {
         client
             .url(appConfig.mkey+'about/contact')
             .webdrivercss(appConfig.testName, {
-                name: 'xprize--about--contact'
+                name: 'xprize--about--contact',
+                exclude: ['#main-navigation','#mini-panel-footer_section']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
