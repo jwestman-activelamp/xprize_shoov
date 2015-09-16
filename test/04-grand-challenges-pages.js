@@ -51,7 +51,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
         client
             .url(appConfig.mkey+'grand-challenges/global-development')
             .webdrivercss(appConfig.testName, {
-                name: 'xprize--grand-challenges--global-developmentt',
+                name: 'xprize--grand-challenges--global-development',
                 remove: ['.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
                 exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)

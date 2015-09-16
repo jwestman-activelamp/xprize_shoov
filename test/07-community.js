@@ -52,7 +52,7 @@ describe('XPRIZE Community Tests', function() {
     client
       .url(appConfig.mkey+'signup')
       .webdrivercss(appConfig.testName, {
-        name: 'xprize--get-involved--newsletter-signup',
+        name: 'xprize--community--get-involved--newsletter-signup',
         remove: ['.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
@@ -152,9 +152,20 @@ describe('XPRIZE Community Tests', function() {
   // News
   it('should show the resources news page',function(done) {
     client
-      .url(appConfig.mkey+'resources/news')
+      .url(appConfig.mkey+'news')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news',
+        remove: ['.social-stream__status'],
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+      }, appConfig.shoovWebdrivercss.processResults)
+      .call(done);
+  });
+
+  it('should show the community news: article page',function(done) {
+    client
+      .url(appConfig.mkey+'news/blog/jono-bacon-interview-about-xprize-and-community')
+      .webdrivercss(appConfig.testName, {
+        name: 'xprize--community--news--jono-bacon-interview-about-xprize-and-community',
         remove: ['.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)

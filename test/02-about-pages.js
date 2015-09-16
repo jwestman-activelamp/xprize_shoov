@@ -256,7 +256,7 @@ describe('XPRIZE About Page Tests', function() {
             .call(done);
     });
 
-    it('should show the careers: What we Stand for page',function(done) {
+    it('should show the careers: What we do page',function(done) {
         client
             .url(appConfig.mkey+'about/careers/what-we-do')
             .webdrivercss(appConfig.testName, {

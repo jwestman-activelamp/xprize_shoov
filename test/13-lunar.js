@@ -177,7 +177,7 @@ describe('XPRIZE Google Lunar Tests', function() {
     client
       .url(appConfig.mkey+'news/blog/kaunertal-then-moon-august-alps-test-puli')
       .webdrivercss(appConfig.testName, {
-        name: 'xprize--lunar--news--blog--kaunertal',
+        name: 'google-lunar--news--blog--kaunertal',
         remove: ['.social-stream__status', '.pane-disqus-disqus-comments'],
         exclude: ['#main-navigation','#mini-panel-footer_section','.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments']
       }, appConfig.shoovWebdrivercss.processResults)
@@ -234,7 +234,7 @@ describe('XPRIZE Google Lunar Tests', function() {
     client
       .url(appConfig.mkey+'teams/blog')
       .webdrivercss(appConfig.testName, {
-        name: 'google-lunar--teams-blog',
+        name: 'google-lunar--teams-blog--individual',
         remove: ['.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
@@ -301,7 +301,7 @@ describe('XPRIZE Google Lunar Tests', function() {
     client
       .url(appConfig.mkey+'education/dome-show-press-kit')
       .webdrivercss(appConfig.testName, {
-        name: 'google-lunar--education-domeshow-merketing',
+        name: 'google-lunar--education-domeshow-marketing',
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
