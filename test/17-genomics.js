@@ -21,7 +21,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics',
         remove: ['.social-stream__status'],
-        exclude: ['.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -34,7 +34,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-overview',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -45,7 +45,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-guidelines',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -56,7 +56,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-dr-stewart-marilyn-blusson',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -67,7 +67,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-partners-supporters',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -78,7 +78,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-scientific-advisory-board',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -89,7 +89,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-media-room',
         remove: ['.latest-news--list'],
-        exclude: ['.latest-news--list']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -100,7 +100,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--about-faq',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -109,7 +109,8 @@ describe('XPRIZE Archon Genomics Tests', function() {
     client
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
-        name: 'genomics--about-contact'
+        name: 'genomics--about-contact',
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -122,7 +123,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--news',
         remove: ['#news-items','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -133,7 +134,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'genomics--news-article',
         remove: ['.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.related-post__block .related-posts__image']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -144,7 +145,8 @@ describe('XPRIZE Archon Genomics Tests', function() {
     client
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
-        name: 'genomics--teams'
+        name: 'genomics--teams',
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

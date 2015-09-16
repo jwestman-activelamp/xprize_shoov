@@ -21,7 +21,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto',
         remove: ['.social-stream__status'],
-        exclude: ['.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -34,7 +34,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-overview',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -45,7 +45,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-guidelines',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -56,7 +56,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-schedule',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -67,7 +67,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-technical-information',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -78,7 +78,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-judges-advisors',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -89,7 +89,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-progressive-insurance',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -100,7 +100,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-partners-supporters',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -111,7 +111,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-sponsors-donors',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -122,7 +122,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-media-room',
         remove: ['.latest-news--list'],
-        exclude: ['.latest-news--list']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -131,7 +131,8 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
     client
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
-        name: 'auto--about-contact'
+        name: 'auto--about-contact',
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -144,7 +145,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--news',
         remove: ['#news-items','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -155,7 +156,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'auto--news-article',
         remove: ['.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.related-post__block .related-posts__image']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -166,7 +167,8 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
     client
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
-        name: 'auto--teams'
+        name: 'auto--teams',
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

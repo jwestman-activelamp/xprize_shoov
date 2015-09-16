@@ -21,7 +21,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community',
         remove: ['.social-stream__status'],
-        exclude: ['.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -32,7 +32,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--thinktanks',
         remove: ['.social-stream__status'],
-        exclude: ['.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -43,7 +43,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--hangout',
         remove: ['.social-stream__status'],
-        exclude: ['.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -67,7 +67,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved',
         remove: ['.social-stream__status'],
-        exclude: ['.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -97,7 +97,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--participate',
         remove: ['.social-stream__status'],
-        exclude: ['.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -110,7 +110,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--think-tanks--join',
         remove: ['.social-stream__status'],
-        exclude: ['.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -121,7 +121,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--think-tanks--create',
         remove: ['.social-stream__status'],
-        exclude: ['.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

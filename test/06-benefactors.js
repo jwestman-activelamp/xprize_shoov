@@ -59,7 +59,7 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .call(done);
     });
 
-    it('should show the benefactors: Entrepreneurs Circle  page',function(done) {
+    it('should show the benefactors: Entrepreneurs Circle page',function(done) {
         client
             .url(appConfig.mkey+'content/entrepreneurs-circle')
             .webdrivercss(appConfig.testName, {

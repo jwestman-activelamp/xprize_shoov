@@ -21,7 +21,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder',
         remove: ['.social-stream__status'],
-        exclude: ['.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -34,7 +34,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-overview',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -45,7 +45,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-guidelines',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -56,7 +56,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-schedule',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -67,7 +67,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-staff',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -78,7 +78,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-staff--vivian-cabral',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -89,7 +89,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-judges',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -100,7 +100,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-scientific-advisory-board',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -111,7 +111,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-qualcomm-foundation',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -122,7 +122,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-partners',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -133,7 +133,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-media-room',
         remove: ['.latest-news--list'],
-        exclude: ['.latest-news--list']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -144,7 +144,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-faq',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -153,7 +153,8 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
     client
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
-        name: 'tricorder--about-contact'
+        name: 'tricorder--about-contact',
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -166,7 +167,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--news',
         remove: ['#news-items','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -177,7 +178,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--news-article',
         remove: ['.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.related-post__block .related-posts__image']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -188,7 +189,8 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
     client
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
-        name: 'tricorder--teams'
+        name: 'tricorder--teams',
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -199,7 +201,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams-about-first',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -210,7 +212,7 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams-about-second',
         remove: ['.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
