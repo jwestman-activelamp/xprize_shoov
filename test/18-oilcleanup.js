@@ -124,6 +124,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--teams',
+        remove: ['.social-stream__status'],
         exlcude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

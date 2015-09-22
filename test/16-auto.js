@@ -168,6 +168,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'auto--teams',
+        remove: ['.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

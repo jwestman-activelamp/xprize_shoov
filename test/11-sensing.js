@@ -74,9 +74,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
 
   it('should show the Nokia Sensing individual staff page',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/vivian-cabral')
+      .url(appConfig.mkey+'about/staff/grant-company')
       .webdrivercss(appConfig.testName, {
-        name: 'nokia-sensing--about-staff--vivian-cabral',
+        name: 'nokia-sensing--about-staff--grant-company',
         remove: ['.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)

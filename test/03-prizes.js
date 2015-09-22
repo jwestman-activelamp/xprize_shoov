@@ -21,7 +21,7 @@ describe('XPRIZE Prizes Page Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes',
                 remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+                exclude: ['.view-hero-slideshow','#main-navigation','#mini-panel-footer_section','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

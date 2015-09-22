@@ -80,7 +80,8 @@ describe('XPRIZE Ansari Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'ansari--teams',
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status' ]
+        remove: ['.social-stream__status'],
+        exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

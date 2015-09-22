@@ -20,7 +20,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges',
-            exclude: ['#main-navigation','#mini-panel-footer_section']
+            exclude: ['view-grand-challenges','#main-navigation','#mini-panel-footer_section']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

@@ -296,7 +296,7 @@ describe('XPRIZE About Page Tests', function() {
         .webdrivercss(appConfig.testName, {
           name: 'xprize--about--visioneering',
           remove: ['.social-stream__status'],
-          exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+          exclude: ['.view-visioneering-slideshow img','#main-navigation','#mini-panel-footer_section','.social-stream__status']
         }, appConfig.shoovWebdrivercss.processResults)
         .call(done);
     });
@@ -307,7 +307,7 @@ describe('XPRIZE About Page Tests', function() {
         .webdrivercss(appConfig.testName, {
           name: 'xprize--ideas--visioneering--2014',
           remove: ['.social-stream__status'],
-          exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+          exclude: ['.view-visioneering-slideshow img','#main-navigation','#mini-panel-footer_section','.social-stream__status']
         }, appConfig.shoovWebdrivercss.processResults)
         .call(done);
     });
@@ -318,7 +318,7 @@ describe('XPRIZE About Page Tests', function() {
         .webdrivercss(appConfig.testName, {
           name: 'xprize--ideas--visioneering--2013',
           remove: ['.social-stream__status'],
-          exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+          exclude: ['.view-visioneering-slideshow img','#main-navigation','#mini-panel-footer_section','.social-stream__status']
         }, appConfig.shoovWebdrivercss.processResults)
         .call(done);
     });

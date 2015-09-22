@@ -74,9 +74,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
 
   it('should show the Qualcomm Tricorder individual staff page',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/vivian-cabral')
+      .url(appConfig.mkey+'about/staff/sara-jennings')
       .webdrivercss(appConfig.testName, {
-        name: 'tricorder--about-staff--vivian-cabral',
+        name: 'tricorder--about-staff--sara-jennings',
         remove: ['.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)

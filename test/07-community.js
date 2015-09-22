@@ -21,7 +21,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.view-microsite-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -32,7 +32,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--thinktanks',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['.think-tank-map','#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -110,7 +110,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--think-tanks--join',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['.think-tank-map','#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -133,7 +133,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--resources--chat',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -144,7 +144,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--resources--calendar',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -156,7 +156,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -167,7 +167,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news--jono-bacon-interview-about-xprize-and-community',
         remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','#disqus_thread .post-list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
