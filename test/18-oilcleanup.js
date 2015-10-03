@@ -20,8 +20,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey)
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -33,8 +33,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-guidelines',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -44,8 +44,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/judges')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-judges',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -55,8 +55,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/wendy-schmidt')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-wendy-schmidt',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -66,8 +66,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/partners-supporters')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-partners-supporters',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -77,8 +77,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-media-room',
-        remove: ['.latest-news--list'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list']
+        remove: ['#mini-panel-footer_section','.latest-news--list'],
+        exclude: ['#main-navigation','.latest-news--list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -88,6 +88,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-contact',
+        remove: ['#mini-panel-footer_section']
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -100,8 +101,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'news')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--news',
-        remove: ['#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -111,8 +112,8 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'press-release/xprize-benefit-celebrates-innovation-oil-cleanup-sets-sights-breakthroughs')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--news-article',
-        remove: ['.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.related-post__block .related-posts__image']
+        remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -124,7 +125,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--teams',
-        remove: ['.social-stream__status'],
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
         exlcude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

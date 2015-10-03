@@ -20,7 +20,8 @@ describe('XPRIZE News Tests', function() {
             .url(appConfig.mkey+'news')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news',
-                exclude: ['#main-navigation','#mini-panel-footer_section','#news-items']
+                remove: ['#mini-panel-footer_section'],
+                exclude: ['#main-navigation','#news-items']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -30,8 +31,8 @@ describe('XPRIZE News Tests', function() {
             .url(appConfig.mkey+'press-release/disney-and-xprize-select-winning-innovators-of-tomorrow')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--press-release--disney-and-xprize',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.pane-disqus-disqus-comments','.related-post__block','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.pane-disqus-disqus-comments','.related-post__block','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -41,8 +42,8 @@ describe('XPRIZE News Tests', function() {
             .url(appConfig.mkey+'news/can-your-city-commit-100-renewable-energy')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--can-your-city-commit',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','#disqus_thread .post-list','.related-post__block']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.social-stream__status','#disqus_thread .post-list','.related-post__block']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

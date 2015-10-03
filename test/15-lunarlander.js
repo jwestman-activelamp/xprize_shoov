@@ -20,8 +20,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .url(appConfig.mkey)
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -33,8 +33,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .url(appConfig.mkey+'about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--about-media-room',
-        remove: ['.latest-news--list'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list']
+        remove: ['#mini-panel-footer_section','.latest-news--list'],
+        exclude: ['#main-navigation','.latest-news--list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -44,6 +44,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--about-contact',
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -56,8 +57,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .url(appConfig.mkey+'news')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--news',
-        remove: ['#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -67,8 +68,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .url(appConfig.mkey+'news/masten-wins-1-million-xprize')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--news-article',
-        remove: ['.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.related-post__block .related-posts__image']
+        remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -80,7 +81,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--teams',
-        remove: ['.social-stream__status'],
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

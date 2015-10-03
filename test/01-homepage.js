@@ -20,8 +20,8 @@ describe('XPRIZE Tests', function() {
       .url(appConfig.mkey)
       .webdrivercss(appConfig.testName, {
         name: 'xprize',
-        remove: ['.social-stream__status','.prizes--list__leaderboard .latest-news--list'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.hero-slider__img','.views-field-field-hero-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
+        remove: ['#mini-panel-footer_section','.social-stream__status','.prizes--list__leaderboard .latest-news--list'],
+        exclude: ['#main-navigation','.hero-slider__img','.views-field-field-hero-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

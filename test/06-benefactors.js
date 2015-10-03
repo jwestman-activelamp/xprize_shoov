@@ -20,8 +20,8 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .url(appConfig.mkey+'benefactors')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -31,8 +31,8 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .url(appConfig.mkey+'benefactors/vision-circle')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--vision-circle',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -42,8 +42,8 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .url(appConfig.mkey+'benefactors/innovation-board')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--innovation-board',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -53,8 +53,8 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .url(appConfig.mkey+'benefactors/spirit-of-innovation')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--spirit-of-innovation',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -64,8 +64,8 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .url(appConfig.mkey+'content/entrepreneurs-circle')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--entrepreneurs-circle',
-                remove: ['.social-stream__status'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status'],
+                exclude: ['#main-navigation','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

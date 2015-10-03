@@ -20,8 +20,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey)
       .webdrivercss(appConfig.testName, {
         name: 'learning',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -33,8 +33,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-overview',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -44,8 +44,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-guidelines',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -55,8 +55,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/schedule')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-schedule',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -66,8 +66,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/benefactors')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-benefactors',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -77,8 +77,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/staff')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-staff',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -88,8 +88,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/staff/shannon-smith')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-staff--shannon-smith',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -99,8 +99,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/xprize')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-xprize',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -110,8 +110,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/partners-supporters')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-partners-supporters',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -121,8 +121,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-media-room',
-        remove: ['.latest-news--list'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news--list']
+        remove: ['#mini-panel-footer_section','.latest-news--list'],
+        exclude: ['#main-navigation','.latest-news--list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -132,8 +132,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/faq')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-faq',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -143,6 +143,7 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-contact',
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -155,8 +156,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'news')
       .webdrivercss(appConfig.testName, {
         name: 'learning--news',
-        remove: ['#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -166,8 +167,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'news/xprize-gets-funny')
       .webdrivercss(appConfig.testName, {
         name: 'learning--news-article',
-        remove: ['.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status', '.related-post__block .related-posts__image']
+        remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -179,6 +180,7 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'learning--teams',
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -191,8 +193,8 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'get-involved')
       .webdrivercss(appConfig.testName, {
         name: 'learning--get-involved',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

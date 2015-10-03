@@ -20,8 +20,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey)
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.view-microsite-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.view-microsite-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -31,8 +31,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'thinktanks')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--thinktanks',
-        remove: ['.social-stream__status'],
-        exclude: ['.think-tank-map','#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['.think-tank-map','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -42,8 +42,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'hangout')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--hangout',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -53,8 +53,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'signup')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--newsletter-signup',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -66,8 +66,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'getinvolved')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -77,7 +77,7 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'getinvolved/future-prizes-vote')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--future-prizes-vote',
-        exclude: ['#main-navigation','#mini-panel-footer_section','.rating-icons']
+        exclude: ['#main-navigation','.rating-icons']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -86,7 +86,7 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'getinvolved/grand-challenges-vote')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--grand-challenges-vote',
-        exclude: ['#main-navigation','#mini-panel-footer_section','.rating-icons']
+        exclude: ['#main-navigation','.rating-icons']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -96,8 +96,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'getinvolved/participate')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--participate',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -109,8 +109,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'thinktanks/join')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--think-tanks--join',
-        remove: ['.social-stream__status'],
-        exclude: ['.think-tank-map','#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['.think-tank-map','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -120,8 +120,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'thinktanks/create')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--think-tanks--create',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -132,8 +132,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'resources/chat')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--resources--chat',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -143,8 +143,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'resources/calendar')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--resources--calendar',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -155,8 +155,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'news')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status','.latest-news__story-block--featured','.latest-news__story-block--basic']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -166,8 +166,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'news/blog/jono-bacon-interview-about-xprize-and-community')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news--jono-bacon-interview-about-xprize-and-community',
-        remove: ['.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','#disqus_thread .post-list']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.social-stream__status','#disqus_thread .post-list']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

@@ -20,6 +20,7 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges',
+            remove: ['#mini-panel-footer_section'],
             exclude: ['view-grand-challenges','#main-navigation','#mini-panel-footer_section']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
@@ -30,8 +31,8 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges/energy-environment')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges--energy-environment',
-                remove: ['.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.star-rating']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                exclude: ['#main-navigation','.social-stream__status','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -41,8 +42,8 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges/exploration')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges--exploration',
-                remove: ['.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.star-rating']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                exclude: ['#main-navigation','.social-stream__status','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -52,8 +53,8 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges/global-development')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges--global-development',
-                remove: ['.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.star-rating']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                exclude: ['#main-navigation','.social-stream__status','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -63,8 +64,8 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges/learning')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges--learning',
-                remove: ['.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.star-rating']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                exclude: ['#main-navigation','.social-stream__status','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
@@ -74,8 +75,8 @@ describe('XPRIZE Grand Challenges Page Tests', function() {
             .url(appConfig.mkey+'grand-challenges/life-sciences')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--grand-challenges--life-sciences',
-                remove: ['.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
-                exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status','.star-rating']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                exclude: ['#main-navigation','.social-stream__status','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
