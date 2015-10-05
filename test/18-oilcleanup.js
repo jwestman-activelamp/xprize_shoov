@@ -88,7 +88,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-contact',
-        remove: ['#mini-panel-footer_section']
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

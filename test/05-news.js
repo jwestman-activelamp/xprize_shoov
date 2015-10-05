@@ -43,7 +43,7 @@ describe('XPRIZE News Tests', function() {
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--can-your-city-commit',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
-                exclude: ['#main-navigation','.social-stream__status','#disqus_thread .post-list','.related-post__block']
+                exclude: ['#main-navigation','.social-stream__status','.pane-disqus-disqus-comments','.related-post__block']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

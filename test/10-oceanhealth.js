@@ -192,7 +192,7 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--teams',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

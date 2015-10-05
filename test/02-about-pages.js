@@ -87,6 +87,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(appConfig.mkey+'about/media-room/photo-gallery')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room--photo-gallery',
+                remove: ['#mini-panel-footer_section'],
                 exclude: ['#main-navigation','#mini-panel-footer_section']
           }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
@@ -108,6 +109,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(appConfig.mkey+'about/media-room/video-gallery')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--media-room--video-gallery',
+                remove: ['#mini-panel-footer_section'],
                 exclude: ['#main-navigation','#mini-panel-footer_section']
           }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
@@ -283,6 +285,7 @@ describe('XPRIZE About Page Tests', function() {
             .url(appConfig.mkey+'about/contact')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--about--contact',
+                remove: ['#mini-panel-footer_section'],
                 exclude: ['#main-navigation','#mini-panel-footer_section']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);

@@ -165,6 +165,7 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .url(appConfig.mkey+'about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-contact',
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation',]
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
