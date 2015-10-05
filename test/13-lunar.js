@@ -193,7 +193,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['.team-directory__block','#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -236,7 +236,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .url(appConfig.mkey+'teams/blog')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-blog--individual',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        remove: ['#mini-panel-footer_section','.social-stream__status', '.team-about__individual-news'],
         exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -283,7 +283,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -304,7 +304,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .url(appConfig.mkey+'education/dome-show-press-kit')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow-marketing',
-        remove: ['#mini-panel-footer_section'],
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

@@ -31,8 +31,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'thinktanks')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--thinktanks',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.think-tank-map','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['.think-tank-map','#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -77,6 +77,7 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'getinvolved/future-prizes-vote')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--future-prizes-vote',
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation','.rating-icons']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -86,6 +87,7 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'getinvolved/grand-challenges-vote')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--grand-challenges-vote',
+        remove: ['#mini-panel-footer_section'],
         exclude: ['#main-navigation','.rating-icons']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
@@ -97,7 +99,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--participate',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['.pds-question-top', '.pds-answer-span','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -167,7 +169,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news--jono-bacon-interview-about-xprize-and-community',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status','#disqus_thread .post-list']
+        exclude: ['#main-navigation','.social-stream__status','.pane-disqus-disqus-comments']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
