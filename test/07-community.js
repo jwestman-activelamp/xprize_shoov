@@ -111,8 +111,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'thinktanks/join')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--think-tanks--join',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.think-tank-map','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status','.think-tank-map'],
+        exclude: ['#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -168,8 +168,8 @@ describe('XPRIZE Community Tests', function() {
       .url(appConfig.mkey+'news/blog/jono-bacon-interview-about-xprize-and-community')
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--news--jono-bacon-interview-about-xprize-and-community',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status','.pane-disqus-disqus-comments']
+        remove: ['#mini-panel-footer_section','.social-stream__status','.pane-disqus-disqus-comments'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

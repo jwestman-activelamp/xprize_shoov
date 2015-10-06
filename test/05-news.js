@@ -42,8 +42,8 @@ describe('XPRIZE News Tests', function() {
             .url(appConfig.mkey+'news/can-your-city-commit-100-renewable-energy')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--can-your-city-commit',
-                remove: ['#mini-panel-footer_section','.social-stream__status'],
-                exclude: ['#main-navigation','.social-stream__status','.pane-disqus-disqus-comments','.related-post__block']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.pane-disqus-disqus-comments'],
+                exclude: ['#main-navigation','.social-stream__status','.related-post__block']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
