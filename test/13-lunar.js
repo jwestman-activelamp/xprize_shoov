@@ -193,7 +193,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.team-directory__block','#main-navigation','.social-stream__status']
+        exclude: ['.team-directory--top-three .team-directory__block','#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

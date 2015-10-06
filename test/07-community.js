@@ -99,7 +99,7 @@ describe('XPRIZE Community Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'xprize--community--get-involved--participate',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.pds-question-top', '.pds-answer-span','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
+        exclude: ['.latest-tweets--message','.pds-question-top', '.pds-answer-span','#main-navigation','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
