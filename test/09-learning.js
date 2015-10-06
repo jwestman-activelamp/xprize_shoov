@@ -193,10 +193,9 @@ describe('XPRIZE Learning Tests', function() {
       .url(appConfig.mkey+'get-involved')
       .webdrivercss(appConfig.testName, {
         name: 'learning--get-involved',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status', '.latest-tweets--message']
+        remove: ['#mini-panel-footer_section','.social-stream__status','.latest-tweets--message'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
-      .call(done);
-  });
+      .call(done);s
 
 });
