@@ -196,6 +196,6 @@ describe('XPRIZE Learning Tests', function() {
         remove: ['#mini-panel-footer_section','.social-stream__status','.latest-tweets--message'],
         exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
-      .call(done);s
+      .call(done);
 
 });
