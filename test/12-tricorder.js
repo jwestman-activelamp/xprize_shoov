@@ -191,8 +191,8 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .url(appConfig.mkey+'teams')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams',
-        remove: ['#mini-panel-footer_section'],
-        exclude: ['.team-directory--top-three .team-directory__block','#main-navigation','#mini-panel-footer_section','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status'],
+        exclude: ['.team-directory--top-three .team-directory__block','#main-navigation']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
