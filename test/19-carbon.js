@@ -144,7 +144,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
     client
       .url(appConfig.mkey+'news')
       .webdrivercss(appConfig.testName, {
-        name: 'carbib--news',
+        name: 'carbon--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
         exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
