@@ -183,7 +183,7 @@ describe('XPRIZE Learning Tests', function() {
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'learning--teams',
-        remove: ['#mini-panel-footer_section'],
+        remove: ['#mini-panel-footer_section', '.social-stream__status'],
         exclude: ['#main-navigation','#mini-panel-footer_section']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);

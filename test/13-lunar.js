@@ -18,7 +18,7 @@ describe('XPRIZE Google Lunar Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Google Lunar front page',function(done) {
+  it('should show the Google Lunar front page @competition @lunar',function(done) {
     client
       .url(baseUrl)
       .webdrivercss(appConfig.testName, {
@@ -31,7 +31,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   // About Pages
 
-  it('should show the Google Lunar overview page',function(done) {
+  it('should show the Google Lunar overview page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
@@ -42,7 +42,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar why the moon page',function(done) {
+  it('should show the Google Lunar why the moon page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/why-the-moon')
       .webdrivercss(appConfig.testName, {
@@ -53,7 +53,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar the space race page',function(done) {
+  it('should show the Google Lunar the space race page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/the-new-space-race')
       .webdrivercss(appConfig.testName, {
@@ -64,7 +64,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar guidelines page',function(done) {
+  it('should show the Google Lunar guidelines page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
@@ -75,7 +75,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar milestone prizes page',function(done) {
+  it('should show the Google Lunar milestone prizes page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/milestone-prizes')
       .webdrivercss(appConfig.testName, {
@@ -86,7 +86,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar staff page',function(done) {
+  it('should show the Google Lunar staff page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
@@ -97,7 +97,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar individual staff page',function(done) {
+  it('should show the Google Lunar individual staff page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/staff/andrew-barton')
       .webdrivercss(appConfig.testName, {
@@ -108,7 +108,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar judges page',function(done) {
+  it('should show the Google Lunar judges page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/judges')
       .webdrivercss(appConfig.testName, {
@@ -119,7 +119,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar media room page',function(done) {
+  it('should show the Google Lunar media room page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
@@ -130,7 +130,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar faq page',function(done) {
+  it('should show the Google Lunar faq page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
@@ -141,7 +141,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar contact page',function(done) {
+  it('should show the Google Lunar contact page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
@@ -154,7 +154,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   // News Pages
 
-  it('should show the Google Lunar news page',function(done) {
+  it('should show the Google Lunar news page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
@@ -165,7 +165,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar news article page',function(done) {
+  it('should show the Google Lunar news article page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/news/audi-ag-supports-part-time-scientists')
       .webdrivercss(appConfig.testName, {
@@ -177,7 +177,7 @@ describe('XPRIZE Google Lunar Tests', function() {
   });
 
 
-  it('should show the news: lunar blog article page',function(done) {
+  it('should show the news: lunar blog article page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/news/blog/kaunertal-then-moon-august-alps-test-puli')
       .webdrivercss(appConfig.testName, {
@@ -190,7 +190,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   // Teams Pages
 
-  it('should show the Google Lunar teams page',function(done) {
+  it('should show the Google Lunar teams page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
@@ -201,7 +201,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar teams about first',function(done) {
+  it('should show the Google Lunar teams about first @competition @lunar',function(done) {
     client
       .url(baseUrl+'/teams/team-spaceil')
       .webdrivercss(appConfig.testName, {
@@ -212,7 +212,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar teams about second',function(done) {
+  it('should show the Google Lunar teams about second @competition @lunar',function(done) {
     client
       .url(baseUrl+'/teams/astrobotic')
       .webdrivercss(appConfig.testName, {
@@ -223,7 +223,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar teams blog page',function(done) {
+  it('should show the Google Lunar teams blog page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/teams/astrobotic/blog')
       .webdrivercss(appConfig.testName, {
@@ -234,7 +234,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar teams individual blog page',function(done) {
+  it('should show the Google Lunar teams individual blog page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/teams/blog')
       .webdrivercss(appConfig.testName, {
@@ -245,7 +245,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar teams video page',function(done) {
+  it('should show the Google Lunar teams video page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/teams/astrobotic/videos')
       .webdrivercss(appConfig.testName, {
@@ -258,7 +258,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   // Education Pages
 
-  it('should show the Google Lunar education page',function(done) {
+  it('should show the Google Lunar education page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/education')
       .webdrivercss(appConfig.testName, {
@@ -269,7 +269,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar moonbots page',function(done) {
+  it('should show the Google Lunar moonbots page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/education/moonbots')
       .webdrivercss(appConfig.testName, {
@@ -280,7 +280,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar fulldome planetarium page',function(done) {
+  it('should show the Google Lunar fulldome planetarium page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/education/domeshow')
       .webdrivercss(appConfig.testName, {
@@ -291,7 +291,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar fulldome planetarium licensing page',function(done) {
+  it('should show the Google Lunar fulldome planetarium licensing page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/education/domeshow-licensing')
       .webdrivercss(appConfig.testName, {
@@ -302,7 +302,7 @@ describe('XPRIZE Google Lunar Tests', function() {
       .call(done);
   });
 
-  it('should show the Google Lunar fulldome planetarium marketing page',function(done) {
+  it('should show the Google Lunar fulldome planetarium marketing page @competition @lunar',function(done) {
     client
       .url(baseUrl+'/education/dome-show-press-kit')
       .webdrivercss(appConfig.testName, {
