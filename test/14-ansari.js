@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://ansari.'+process.env.BASE_URL : 'http://ansari.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@ansari.'+process.env.BASE_URL : 'http://ansari.xprize.org';
 
 describe('XPRIZE Ansari Tests', function() {
 
@@ -18,7 +18,7 @@ describe('XPRIZE Ansari Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Ansari front page',function(done) {
+  it('should show the Ansari front page @old-competition @ansari',function(done) {
     client
       .url(baseUrl)
       .webdrivercss(appConfig.testName, {
@@ -31,7 +31,7 @@ describe('XPRIZE Ansari Tests', function() {
 
   // About Pages
 
-  it('should show the Ansari media room page',function(done) {
+  it('should show the Ansari media room page @old-competition @ansari',function(done) {
     client
       .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
@@ -42,7 +42,7 @@ describe('XPRIZE Ansari Tests', function() {
       .call(done);
   });
 
-  it('should show the Ansari contact page',function(done) {
+  it('should show the Ansari contact page @old-competition @ansari',function(done) {
     client
       .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
@@ -55,7 +55,7 @@ describe('XPRIZE Ansari Tests', function() {
 
   // News Pages
 
-  it('should show the Ansari news page',function(done) {
+  it('should show the Ansari news page @old-competition @ansari',function(done) {
     client
       .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
@@ -66,7 +66,7 @@ describe('XPRIZE Ansari Tests', function() {
       .call(done);
   });
 
-  it('should show the Ansari news article page',function(done) {
+  it('should show the Ansari news article page @old-competition @ansari',function(done) {
     client
       .url(baseUrl+'/news/bicycles-spaceships')
       .webdrivercss(appConfig.testName, {
@@ -79,7 +79,7 @@ describe('XPRIZE Ansari Tests', function() {
 
   // Teams Pages
 
-  it('should show the Ansari teams page',function(done) {
+  it('should show the Ansari teams page @old-competition @ansari',function(done) {
     client
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {

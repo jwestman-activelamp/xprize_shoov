@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@'+process.env.BASE_URL : 'http://xprize.org';
 
 describe('XPRIZE Benefactors Page Tests', function() {
 

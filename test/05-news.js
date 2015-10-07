@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@'+process.env.BASE_URL : 'http://xprize.org';
 
 describe('XPRIZE News Tests', function() {
 
@@ -34,8 +34,8 @@ describe('XPRIZE News Tests', function() {
             .url(baseUrl+'/press-release/disney-and-xprize-select-winning-innovators-of-tomorrow')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--press-release--disney-and-xprize',
-                remove: ['#mini-panel-footer_section','.social-stream__status'],
-                exclude: ['#main-navigation','.pane-disqus-disqus-comments','.related-post__block','.social-stream__status']
+                remove: ['#mini-panel-footer_section','.social-stream__status','.pane-disqus-disqus-comments'],
+                exclude: ['#main-navigation','.related-post__block','.social-stream__status']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });

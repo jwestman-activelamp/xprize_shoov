@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://lunar.'+process.env.BASE_URL : 'http://lunar.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@lunar.'+process.env.BASE_URL : 'http://lunar.xprize.org';
 
 describe('XPRIZE Google Lunar Tests', function() {
 
@@ -195,8 +195,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.team-directory--top-three .team-directory__block','#main-navigation','.social-stream__status']
+        remove: ['#mini-panel-footer_section','.social-stream__status','.team-directory--top-three .team-directory__block'],
+        exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

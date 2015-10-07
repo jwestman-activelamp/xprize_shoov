@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://genomics.'+process.env.BASE_URL : 'http://genomics.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@genomics.'+process.env.BASE_URL : 'http://genomics.xprize.org';
 
 describe('XPRIZE Archon Genomics Tests', function() {
 
@@ -18,7 +18,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Archon Genomics front page',function(done) {
+  it('should show the Archon Genomics front page @old-competition @genomics',function(done) {
     client
       .url(baseUrl)
       .webdrivercss(appConfig.testName, {
@@ -31,7 +31,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
 
   // About Pages
 
-  it('should show the Archon Genomics overview page',function(done) {
+  it('should show the Archon Genomics overview page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
@@ -42,7 +42,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics guidelines page',function(done) {
+  it('should show the Archon Genomics guidelines page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
@@ -53,7 +53,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics Dr Stewart and Marilyn Blusson page',function(done) {
+  it('should show the Archon Genomics Dr Stewart and Marilyn Blusson page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/dr-stewart-marilyn-blusson')
       .webdrivercss(appConfig.testName, {
@@ -64,7 +64,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics partners and supporters page',function(done) {
+  it('should show the Archon Genomics partners and supporters page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/partners-supporters')
       .webdrivercss(appConfig.testName, {
@@ -75,7 +75,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics scientific advisory page',function(done) {
+  it('should show the Archon Genomics scientific advisory page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/scientific-advisory-board')
       .webdrivercss(appConfig.testName, {
@@ -86,7 +86,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics media room page',function(done) {
+  it('should show the Archon Genomics media room page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
@@ -97,7 +97,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics faq page',function(done) {
+  it('should show the Archon Genomics faq page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
@@ -108,7 +108,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics contact page',function(done) {
+  it('should show the Archon Genomics contact page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
@@ -121,7 +121,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
 
   // News Pages
 
-  it('should show the Archon Genomics news page',function(done) {
+  it('should show the Archon Genomics news page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
@@ -132,7 +132,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
       .call(done);
   });
 
-  it('should show the Archon Genomics news article page',function(done) {
+  it('should show the Archon Genomics news article page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/news/new-study-aims-rapidly-test-lung-cancer-drugs')
       .webdrivercss(appConfig.testName, {
@@ -145,7 +145,7 @@ describe('XPRIZE Archon Genomics Tests', function() {
 
   // Teams Pages
 
-  it('should show the Archon Genomics teams page',function(done) {
+  it('should show the Archon Genomics teams page @old-competition @genomics',function(done) {
     client
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {

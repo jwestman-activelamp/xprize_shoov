@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://tricorder.'+process.env.BASE_URL : 'http://tricorder.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@tricorder.'+process.env.BASE_URL : 'http://tricorder.xprize.org';
 
 describe('XPRIZE Qualcomm Tricorder Tests', function() {
 
@@ -194,8 +194,8 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams',
-        remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.team-directory--top-three .team-directory__block','#main-navigation']
+        remove: ['#mini-panel-footer_section','.social-stream__status','.team-directory--top-three .team-directory__block'],
+        exclude: ['#main-navigation']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

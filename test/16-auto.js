@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://auto.'+process.env.BASE_URL : 'http://auto.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@auto.'+process.env.BASE_URL : 'http://auto.xprize.org';
 
 describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
@@ -18,7 +18,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Progressive Insurance Auto front page',function(done) {
+  it('should show the Progressive Insurance Auto front page @old-competition @auto',function(done) {
     client
       .url(baseUrl)
       .webdrivercss(appConfig.testName, {
@@ -31,7 +31,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   // About Pages
 
-  it('should show the Progressive Insurance Auto overview page',function(done) {
+  it('should show the Progressive Insurance Auto overview page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
@@ -42,7 +42,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto guidelines page',function(done) {
+  it('should show the Progressive Insurance Auto guidelines page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
@@ -53,7 +53,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto schedule page',function(done) {
+  it('should show the Progressive Insurance Auto schedule page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
@@ -64,7 +64,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto technical information page',function(done) {
+  it('should show the Progressive Insurance Auto technical information page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/technical-information')
       .webdrivercss(appConfig.testName, {
@@ -75,7 +75,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto judges and advisors page',function(done) {
+  it('should show the Progressive Insurance Auto judges and advisors page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/judges-advisors')
       .webdrivercss(appConfig.testName, {
@@ -86,7 +86,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto page',function(done) {
+  it('should show the Progressive Insurance Auto page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/progressive-insurance')
       .webdrivercss(appConfig.testName, {
@@ -97,7 +97,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto partners and supporter page',function(done) {
+  it('should show the Progressive Insurance Auto partners and supporter page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/partners-supporters')
       .webdrivercss(appConfig.testName, {
@@ -108,7 +108,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto sponsors and donors page',function(done) {
+  it('should show the Progressive Insurance Auto sponsors and donors page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/sponsors-donors')
       .webdrivercss(appConfig.testName, {
@@ -119,7 +119,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto media room page',function(done) {
+  it('should show the Progressive Insurance Auto media room page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
@@ -130,7 +130,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto contact page',function(done) {
+  it('should show the Progressive Insurance Auto contact page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
@@ -143,7 +143,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   // News Pages
 
-  it('should show the Progressive Insurance Auto news page',function(done) {
+  it('should show the Progressive Insurance Auto news page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
@@ -154,7 +154,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
       .call(done);
   });
 
-  it('should show the Progressive Insurance Auto news article page',function(done) {
+  it('should show the Progressive Insurance Auto news article page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/news/fast-times-west-philly-high')
       .webdrivercss(appConfig.testName, {
@@ -167,7 +167,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   // Teams Pages
 
-  it('should show the Progressive Insurance Auto teams page',function(done) {
+  it('should show the Progressive Insurance Auto teams page @old-competition @auto',function(done) {
     client
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {

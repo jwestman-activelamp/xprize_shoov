@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://lunarlander.'+process.env.BASE_URL : 'http://lunarlander.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@lunarlander.'+process.env.BASE_URL : 'http://lunarlander.xprize.org';
 
 describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
@@ -18,7 +18,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Northrop Grumman Lunar Lander front page',function(done) {
+  it('should show the Northrop Grumman Lunar Lander front page @old-competition @lunarlander',function(done) {
     client
       .url(baseUrl)
       .webdrivercss(appConfig.testName, {
@@ -31,7 +31,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   // About Pages
 
-  it('should show the Northrop Grumman Lunar Lander media room page',function(done) {
+  it('should show the Northrop Grumman Lunar Lander media room page @old-competition @lunarlander',function(done) {
     client
       .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
@@ -42,7 +42,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .call(done);
   });
 
-  it('should show the Northrop Grumman Lunar Lander contact page',function(done) {
+  it('should show the Northrop Grumman Lunar Lander contact page @old-competition @lunarlander',function(done) {
     client
       .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
@@ -55,7 +55,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   // News Pages
 
-  it('should show the Northrop Grumman Lunar Lander news page',function(done) {
+  it('should show the Northrop Grumman Lunar Lander news page @old-competition @lunarlander',function(done) {
     client
       .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
@@ -66,7 +66,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .call(done);
   });
 
-  it('should show the Northrop Grumman Lunar Lander news article page',function(done) {
+  it('should show the Northrop Grumman Lunar Lander news article page @old-competition @lunarlander',function(done) {
     client
       .url(baseUrl+'/news/masten-wins-1-million-xprize')
       .webdrivercss(appConfig.testName, {
@@ -79,7 +79,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   // Teams Pages
 
-  it('should show the Northrop Grumman Lunar Lander teams page',function(done) {
+  it('should show the Northrop Grumman Lunar Lander teams page @old-competition @lunarlander',function(done) {
     client
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {

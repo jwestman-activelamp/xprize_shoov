@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://oceanhealth.'+process.env.BASE_URL : 'http://oceanhealth.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@oceanhealth.'+process.env.BASE_URL : 'http://oceanhealth.xprize.org';
 
 describe('XPRIZE Ocean Health Tests', function() {
 

@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://sensing.'+process.env.BASE_URL : 'http://sensing.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@sensing.'+process.env.BASE_URL : 'http://sensing.xprize.org';
 
 describe('XPRIZE Nokia Sensing Tests', function() {
 

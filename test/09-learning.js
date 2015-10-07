@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://learning.'+process.env.BASE_URL : 'http://learning.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@learning.'+process.env.BASE_URL : 'http://learning.xprize.org';
 
 describe('XPRIZE Learning Tests', function() {
 
@@ -193,7 +193,7 @@ describe('XPRIZE Learning Tests', function() {
 
   it('should show the Learning get involved page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey + 'get-involved')
+      .url(baseUrl+'/get-involved')
       .webdrivercss(appConfig.testName, {
         name: 'learning--get-involved',
         remove: ['#mini-panel-footer_section', '.social-stream__status', '.latest-tweets--message'],

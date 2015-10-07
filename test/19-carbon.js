@@ -2,7 +2,7 @@
 
 var appConfig = require('appConfig');
 
-var baseUrl = process.env.BASE_URL ? 'http://carbon.'+process.env.BASE_URL : 'http://carbon.xprize.org';
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.Credentials+'@carbon.'+process.env.BASE_URL : 'http://carbon.xprize.org';
 
 describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
 
@@ -18,7 +18,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Carbon front page',function(done) {
+  it('should show the Carbon front page @competition @carbon',function(done) {
     client
       .url(baseUrl)
       .webdrivercss(appConfig.testName, {
@@ -31,7 +31,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
 
   // About Pages
 
-  it('should show the Carbon overview page',function(done) {
+  it('should show the Carbon overview page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
@@ -42,7 +42,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon guidelines page',function(done) {
+  it('should show the Carbon guidelines page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
@@ -53,7 +53,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon schedule page',function(done) {
+  it('should show the Carbon schedule page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
@@ -64,7 +64,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon sponsors page',function(done) {
+  it('should show the Carbon sponsors page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/sponsors')
       .webdrivercss(appConfig.testName, {
@@ -75,7 +75,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon staff page',function(done) {
+  it('should show the Carbon staff page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
@@ -86,7 +86,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon individual staff page',function(done) {
+  it('should show the Carbon individual staff page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/staff/paul-bunje')
       .webdrivercss(appConfig.testName, {
@@ -97,7 +97,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon About XPRIZE page',function(done) {
+  it('should show the Carbon About XPRIZE page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/xprize')
       .webdrivercss(appConfig.testName, {
@@ -108,7 +108,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon media room page',function(done) {
+  it('should show the Carbon media room page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
@@ -119,7 +119,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon faq page',function(done) {
+  it('should show the Carbon faq page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
@@ -130,7 +130,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon contact page',function(done) {
+  it('should show the Carbon contact page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
@@ -143,7 +143,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
 
   // News Pages
 
-  it('should show the Carbon news page',function(done) {
+  it('should show the Carbon news page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
@@ -154,7 +154,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .call(done);
   });
 
-  it('should show the Carbon news article page',function(done) {
+  it('should show the Carbon news article page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/news/introducing-20m-nrg-cosia-carbon-xprize')
       .webdrivercss(appConfig.testName, {
@@ -167,7 +167,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
 
   // Teams Pages
 
-  it('should show the Carbon teams page',function(done) {
+  it('should show the Carbon teams page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
@@ -180,7 +180,7 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
 
   // Get Involved Pages
 
-  it('should show the Carbon get involved page',function(done) {
+  it('should show the Carbon get involved page @competition @carbon',function(done) {
     client
       .url(baseUrl+'/get-involved')
       .webdrivercss(appConfig.testName, {
