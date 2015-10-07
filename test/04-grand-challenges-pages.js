@@ -7,7 +7,7 @@ var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xp
 describe('XPRIZE Grand Challenges Page Tests', function() {
 
     this.timeout(99999999);
-    this.slow(10000);
+    this.slow(15000);
     var client = {};
 
     before(function(done){
