@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('tricorder');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://tricorder.'+process.env.BASE_URL : 'http://tricorder.xprize.org';
 
 describe('XPRIZE Qualcomm Tricorder Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Qualcomm Tricorder front page',function(done) {
+  it('should show the Qualcomm Tricorder front page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'tricorder',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -28,9 +31,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
 
   // About Pages
 
-  it('should show the Qualcomm Tricorder overview page',function(done) {
+  it('should show the Qualcomm Tricorder overview page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/overview')
+      .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -39,9 +42,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder guidelines page',function(done) {
+  it('should show the Qualcomm Tricorder guidelines page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -50,9 +53,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder schedule page',function(done) {
+  it('should show the Qualcomm Tricorder schedule page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/schedule')
+      .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -61,9 +64,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder staff page',function(done) {
+  it('should show the Qualcomm Tricorder staff page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/staff')
+      .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -72,9 +75,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder individual staff page',function(done) {
+  it('should show the Qualcomm Tricorder individual staff page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/sara-jennings')
+      .url(baseUrl+'/about/staff/sara-jennings')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-staff--sara-jennings',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -83,9 +86,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder judges page',function(done) {
+  it('should show the Qualcomm Tricorder judges page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/judges')
+      .url(baseUrl+'/about/judges')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-judges',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -94,9 +97,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder scientific advisory page',function(done) {
+  it('should show the Qualcomm Tricorder scientific advisory page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/scientific-advisory-board')
+      .url(baseUrl+'/about/scientific-advisory-board')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-scientific-advisory-board',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -105,9 +108,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder Qualcomm Foundation page',function(done) {
+  it('should show the Qualcomm Tricorder Qualcomm Foundation page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/qualcomm-foundation')
+      .url(baseUrl+'/about/qualcomm-foundation')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-qualcomm-foundation',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -116,9 +119,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder partners page',function(done) {
+  it('should show the Qualcomm Tricorder partners page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/partners')
+      .url(baseUrl+'/about/partners')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-partners',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -127,9 +130,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder media room page',function(done) {
+  it('should show the Qualcomm Tricorder media room page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -138,9 +141,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder faq page',function(done) {
+  it('should show the Qualcomm Tricorder faq page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/faq')
+      .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -149,9 +152,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder contact page',function(done) {
+  it('should show the Qualcomm Tricorder contact page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -162,9 +165,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
 
   // News Pages
 
-  it('should show the Qualcomm Tricorder news page',function(done) {
+  it('should show the Qualcomm Tricorder news page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -173,9 +176,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder news article page',function(done) {
+  it('should show the Qualcomm Tricorder news article page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'news/doctors-are-consumers-too-changing-way-physicians-approach-health-care')
+      .url(baseUrl+'/news/doctors-are-consumers-too-changing-way-physicians-approach-health-care')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -186,9 +189,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
 
   // Teams Pages
 
-  it('should show the Qualcomm Tricorder teams page',function(done) {
+  it('should show the Qualcomm Tricorder teams page @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -197,9 +200,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder teams about first',function(done) {
+  it('should show the Qualcomm Tricorder teams about first @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'teams/aezon')
+      .url(baseUrl+'/teams/aezon')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams-about-first',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -208,9 +211,9 @@ describe('XPRIZE Qualcomm Tricorder Tests', function() {
       .call(done);
   });
 
-  it('should show the Qualcomm Tricorder teams about second',function(done) {
+  it('should show the Qualcomm Tricorder teams about second @competition @tricorder',function(done) {
     client
-      .url(appConfig.mkey+'teams/clouddx')
+      .url(baseUrl+'/teams/clouddx')
       .webdrivercss(appConfig.testName, {
         name: 'tricorder--teams-about-second',
         remove: ['#mini-panel-footer_section','.social-stream__status'],

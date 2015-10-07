@@ -2,9 +2,12 @@
 
 var appConfig = require('appConfig');
 
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xprize.org';
+
 describe('XPRIZE Prizes Page Tests', function() {
 
     this.timeout(99999999);
+    this.slow(10000);
     var client = {};
 
     before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Prizes Page Tests', function() {
         appConfig.shoovWebdrivercss.after(done);
     });
 
-    it('should show the prizes page',function(done) {
+    it('should show the prizes page @main @prizes',function(done) {
         client
-            .url(appConfig.mkey+'prizes')
+            .url(baseUrl+'/prizes')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -26,20 +29,20 @@ describe('XPRIZE Prizes Page Tests', function() {
             .call(done);
     });
 
-    it('should show the future prizes page',function(done) {
+    it('should show the future prizes page @main @prizes',function(done) {
         client
-            .url(appConfig.mkey+'prizes/future-prizes')
+            .url(baseUrl+'/prizes/future-prizes')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes--future-prizes',
-                remove: ['#mini-panel-footer_section','.prize-concepts .filters', '.prize-concepts #prize-concepts-content'],
+                remove: ['#mini-panel-footer_section','.prize-concepts .filters','.prize-concepts #prize-concepts-content'],
                 exclude: ['#main-navigation','.star-rating']
             }, appConfig.shoovWebdrivercss.processResults)
             .call(done);
     });
 
-    it('should show the future prizes: AI prize presented by TED page',function(done) {
+    it('should show the future prizes: AI prize presented by TED page @main @prizes',function(done) {
         client
-            .url(appConfig.mkey+'prizes/future-prizes/ai-xprize-presented-ted')
+            .url(baseUrl+'/prizes/future-prizes/ai-xprize-presented-ted')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--prizes--future-prizes-ai-xprize-presented-ted',
                 remove: ['#mini-panel-footer_section','.social-stream__status','.pane-disqus-disqus-comments'],

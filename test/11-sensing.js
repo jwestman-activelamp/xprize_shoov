@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('sensing');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://sensing.'+process.env.BASE_URL : 'http://sensing.xprize.org';
 
 describe('XPRIZE Nokia Sensing Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Nokia Sensing front page',function(done) {
+  it('should show the Nokia Sensing front page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -28,9 +31,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
 
   // About Pages
 
-  it('should show the Nokia Sensing overview page',function(done) {
+  it('should show the Nokia Sensing overview page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/overview')
+      .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -39,9 +42,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing guidelines page',function(done) {
+  it('should show the Nokia Sensing guidelines page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -50,9 +53,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing schedule page',function(done) {
+  it('should show the Nokia Sensing schedule page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/schedule')
+      .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -61,9 +64,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing staff page',function(done) {
+  it('should show the Nokia Sensing staff page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/staff')
+      .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -72,20 +75,20 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing individual staff page',function(done) {
+  it('should show the Nokia Sensing individual staff page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/grant-company')
+      .url(baseUrl+'/about/staff/grant-campany')
       .webdrivercss(appConfig.testName, {
-        name: 'nokia-sensing--about-staff--grant-company',
+        name: 'nokia-sensing--about-staff--grant-campany',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
         exclude: ['#main-navigation','.social-stream__status']
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
 
-  it('should show the Nokia Sensing judges for competition 1 page',function(done) {
+  it('should show the Nokia Sensing judges for competition 1 page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/judges/competition-1')
+      .url(baseUrl+'/about/judges/competition-1')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-judges-competition-1',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -94,9 +97,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing judges for competition 2 page',function(done) {
+  it('should show the Nokia Sensing judges for competition 2 page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/judges/competition-2')
+      .url(baseUrl+'/about/judges/competition-2')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-judges-competition-2',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -105,9 +108,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing scientific advisory board page',function(done) {
+  it('should show the Nokia Sensing scientific advisory board page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/scientific-advisory-board')
+      .url(baseUrl+'/about/scientific-advisory-board')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-scientific-advisory-board',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -116,9 +119,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing nokia page',function(done) {
+  it('should show the Nokia Sensing nokia page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/nokia')
+      .url(baseUrl+'/about/nokia')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-nokia',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -127,9 +130,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing partners page',function(done) {
+  it('should show the Nokia Sensing partners page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/partners')
+      .url(baseUrl+'/about/partners')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-partners',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -138,9 +141,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing media room page',function(done) {
+  it('should show the Nokia Sensing media room page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -149,9 +152,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing faq page',function(done) {
+  it('should show the Nokia Sensing faq page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/faq')
+      .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -160,9 +163,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing contact page',function(done) {
+  it('should show the Nokia Sensing contact page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -173,9 +176,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
 
   // News Pages
 
-  it('should show the Nokia Sensing news page',function(done) {
+  it('should show the Nokia Sensing news page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -184,9 +187,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing news article page',function(done) {
+  it('should show the Nokia Sensing news article page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'news/ebola-stroke-timing-everything')
+      .url(baseUrl+'/news/ebola-stroke-timing-everything')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -197,9 +200,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
 
   // Teams Pages
 
-  it('should show the Nokia Sensing competition 1 teams page',function(done) {
+  it('should show the Nokia Sensing competition 1 teams page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-1-teams')
+      .url(baseUrl+'/teams/competition-1-teams')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -208,9 +211,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 1 teams about gold page',function(done) {
+  it('should show the Nokia Sensing competition 1 teams about gold page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-1-teams/nanobiosym-health-radar')
+      .url(baseUrl+'/teams/competition-1-teams/nanobiosym-health-radar')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams-about-gold',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -219,9 +222,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 1 teams about silver page',function(done) {
+  it('should show the Nokia Sensing competition 1 teams about silver page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-1-teams/elfi-tech')
+      .url(baseUrl+'/teams/competition-1-teams/elfi-tech')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams-about-silver',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -230,9 +233,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 1 teams about regular page',function(done) {
+  it('should show the Nokia Sensing competition 1 teams about regular page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-1-teams/holomic')
+      .url(baseUrl+'/teams/competition-1-teams/holomic')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams-about-regular',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -241,9 +244,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 2 teams page',function(done) {
+  it('should show the Nokia Sensing competition 2 teams page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-2-teams')
+      .url(baseUrl+'/teams/competition-2-teams')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -252,9 +255,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 2 teams about gold page',function(done) {
+  it('should show the Nokia Sensing competition 2 teams about gold page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-2-teams/dmi')
+      .url(baseUrl+'/teams/competition-2-teams/dmi')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams-about-gold',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -263,9 +266,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 2 teams about silver page',function(done) {
+  it('should show the Nokia Sensing competition 2 teams about silver page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-2-teams/golden-gopher-magnetic-biosensing')
+      .url(baseUrl+'/teams/competition-2-teams/golden-gopher-magnetic-biosensing')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams-about-silver',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -274,9 +277,9 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .call(done);
   });
 
-  it('should show the Nokia Sensing competition 2 teams about regular page',function(done) {
+  it('should show the Nokia Sensing competition 2 teams about regular page @competition @sensing',function(done) {
     client
-      .url(appConfig.mkey+'teams/competition-2-teams/hemolix')
+      .url(baseUrl+'/teams/competition-2-teams/hemolix')
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams-about-regular',
         remove: ['#mini-panel-footer_section','.social-stream__status'],

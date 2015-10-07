@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('adultliteracy');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://adultliteracy.'+process.env.BASE_URL : 'http://adultliteracy.xprize.org';
 
 describe('XPRIZE Adult Literacy Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Adult Literacy front page',function(done) {
+  it('should show the Adult Literacy front page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -28,9 +31,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
 
   // About Pages
 
-  it('should show the Adult Literacy overview page',function(done) {
+  it('should show the Adult Literacy overview page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/overview')
+      .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -39,9 +42,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy guidelines page',function(done) {
+  it('should show the Adult Literacy guidelines page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -50,9 +53,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy schedule page',function(done) {
+  it('should show the Adult Literacy schedule page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/schedule')
+      .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -61,9 +64,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy benefactors page',function(done) {
+  it('should show the Adult Literacy benefactors page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/benefactors')
+      .url(baseUrl+'/about/benefactors')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-benefactors',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -72,9 +75,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy staff page',function(done) {
+  it('should show the Adult Literacy staff page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/staff')
+      .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -83,9 +86,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy individual staff page',function(done) {
+  it('should show the Adult Literacy individual staff page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/jennifer-bravo')
+      .url(baseUrl+'/about/staff/jennifer-bravo')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-staff--jennifer-bravo',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -94,9 +97,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy about XPRIZE page',function(done) {
+  it('should show the Adult Literacy about XPRIZE page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/xprize')
+      .url(baseUrl+'/about/xprize')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-xprize',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -105,9 +108,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy media room page',function(done) {
+  it('should show the Adult Literacy media room page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -116,9 +119,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy faq page',function(done) {
+  it('should show the Adult Literacy faq page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/faq')
+      .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -127,9 +130,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy contact page',function(done) {
+  it('should show the Adult Literacy contact page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -140,9 +143,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
 
   // News Pages
 
-  it('should show the Adult Literacy news page',function(done) {
+  it('should show the Adult Literacy news page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -151,9 +154,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy news article page',function(done) {
+  it('should show the Adult Literacy news article page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'news/literacy-changes-lives')
+      .url(baseUrl+'/news/literacy-changes-lives')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -164,9 +167,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
 
   // Teams Pages
 
-  it('should show the Adult Literacy teams page',function(done) {
+  it('should show the Adult Literacy teams page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--teams',
         remove: ['#mini-panel-footer_section'],
@@ -177,9 +180,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
 
   // Get Involved Pages
 
-  it('should show the Adult Literacy get involved page',function(done) {
+  it('should show the Adult Literacy get involved page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'get-involved')
+      .url(baseUrl+'/get-involved')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--get-involved',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -188,9 +191,9 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .call(done);
   });
 
-  it('should show the Adult Literacy think tank page',function(done) {
+  it('should show the Adult Literacy think tank page @competition @literacy',function(done) {
     client
-      .url(appConfig.mkey+'get-involved/think-tank')
+      .url(baseUrl+'/get-involved/think-tank')
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--get-involved--think-tank',
         remove: ['#mini-panel-footer_section','.social-stream__status'],

@@ -2,9 +2,12 @@
 
 var appConfig = require('appConfig');
 
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xprize.org';
+
 describe('XPRIZE Benefactors Page Tests', function() {
 
     this.timeout(99999999);
+    this.slow(10000);
     var client = {};
 
     before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Benefactors Page Tests', function() {
         appConfig.shoovWebdrivercss.after(done);
     });
 
-    it('should show the benefactors page',function(done) {
+    it('should show the benefactors page @main @benefactors',function(done) {
         client
-            .url(appConfig.mkey+'benefactors')
+            .url(baseUrl+'/benefactors')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -26,9 +29,9 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .call(done);
     });
 
-    it('should show the benefactors: Vision Circle page',function(done) {
+    it('should show the benefactors: Vision Circle page @main @benefactors',function(done) {
         client
-            .url(appConfig.mkey+'benefactors/vision-circle')
+            .url(baseUrl+'/benefactors/vision-circle')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--vision-circle',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -37,9 +40,9 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .call(done);
     });
 
-    it('should show the benefactors: Innovation Board page',function(done) {
+    it('should show the benefactors: Innovation Board page @main @benefactors',function(done) {
         client
-            .url(appConfig.mkey+'benefactors/innovation-board')
+            .url(baseUrl+'/benefactors/innovation-board')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--innovation-board',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -48,9 +51,9 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .call(done);
     });
 
-    it('should show the benefactors: Spirit of Innovation page',function(done) {
+    it('should show the benefactors: Spirit of Innovation page @main @benefactors',function(done) {
         client
-            .url(appConfig.mkey+'benefactors/spirit-of-innovation')
+            .url(baseUrl+'/benefactors/spirit-of-innovation')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--spirit-of-innovation',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -59,9 +62,9 @@ describe('XPRIZE Benefactors Page Tests', function() {
             .call(done);
     });
 
-    it('should show the benefactors: Entrepreneurs Circle page',function(done) {
+    it('should show the benefactors: Entrepreneurs Circle page @main @benefactors',function(done) {
         client
-            .url(appConfig.mkey+'content/entrepreneurs-circle')
+            .url(baseUrl+'/content/entrepreneurs-circle')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--benefactors--entrepreneurs-circle',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],

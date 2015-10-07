@@ -2,9 +2,12 @@
 
 var appConfig = require('appConfig');
 
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xprize.org';
+
 describe('XPRIZE Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the xprize.org page',function(done) {
+  it('should show the xprize.org page @main',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'xprize',
         remove: ['#mini-panel-footer_section','.social-stream__status','.prizes--list__leaderboard .latest-news--list'],

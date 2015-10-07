@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('auto');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://auto.'+process.env.BASE_URL : 'http://auto.xprize.org';
 
 describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -17,7 +20,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto front page',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'auto',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -30,7 +33,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto overview page',function(done) {
     client
-      .url(appConfig.mkey+'about/overview')
+      .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -41,7 +44,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto guidelines page',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -52,7 +55,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto schedule page',function(done) {
     client
-      .url(appConfig.mkey+'about/schedule')
+      .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -63,7 +66,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto technical information page',function(done) {
     client
-      .url(appConfig.mkey+'about/technical-information')
+      .url(baseUrl+'/about/technical-information')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-technical-information',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -74,7 +77,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto judges and advisors page',function(done) {
     client
-      .url(appConfig.mkey+'about/judges-advisors')
+      .url(baseUrl+'/about/judges-advisors')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-judges-advisors',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -85,7 +88,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto page',function(done) {
     client
-      .url(appConfig.mkey+'about/progressive-insurance')
+      .url(baseUrl+'/about/progressive-insurance')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-progressive-insurance',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -96,7 +99,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto partners and supporter page',function(done) {
     client
-      .url(appConfig.mkey+'about/partners-supporters')
+      .url(baseUrl+'/about/partners-supporters')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-partners-supporters',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -107,7 +110,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto sponsors and donors page',function(done) {
     client
-      .url(appConfig.mkey+'about/sponsors-donors')
+      .url(baseUrl+'/about/sponsors-donors')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-sponsors-donors',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -118,7 +121,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto media room page',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -129,7 +132,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto contact page',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'auto--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -142,7 +145,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto news page',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'auto--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -153,7 +156,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto news article page',function(done) {
     client
-      .url(appConfig.mkey+'news/fast-times-west-philly-high')
+      .url(baseUrl+'/news/fast-times-west-philly-high')
       .webdrivercss(appConfig.testName, {
         name: 'auto--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -166,7 +169,7 @@ describe('XPRIZE Progressive Insurance Auto Tests', function() {
 
   it('should show the Progressive Insurance Auto teams page',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'auto--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],

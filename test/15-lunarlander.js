@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('lunarlander');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://lunarlander.'+process.env.BASE_URL : 'http://lunarlander.xprize.org';
 
 describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -17,7 +20,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   it('should show the Northrop Grumman Lunar Lander front page',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -30,7 +33,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   it('should show the Northrop Grumman Lunar Lander media room page',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -41,7 +44,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   it('should show the Northrop Grumman Lunar Lander contact page',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -54,7 +57,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   it('should show the Northrop Grumman Lunar Lander news page',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -65,7 +68,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   it('should show the Northrop Grumman Lunar Lander news article page',function(done) {
     client
-      .url(appConfig.mkey+'news/masten-wins-1-million-xprize')
+      .url(baseUrl+'/news/masten-wins-1-million-xprize')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -78,7 +81,7 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
 
   it('should show the Northrop Grumman Lunar Lander teams page',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],

@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('learning');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://learning.'+process.env.BASE_URL : 'http://learning.xprize.org';
 
 describe('XPRIZE Learning Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE Learning Tests', function() {
     appConfig.shoovWebdrivercss.after(done);
   });
 
-  it('should show the Learning front page',function(done) {
+  it('should show the Learning front page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'learning',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -28,9 +31,9 @@ describe('XPRIZE Learning Tests', function() {
 
   // About Pages
 
-  it('should show the Learning overview page',function(done) {
+  it('should show the Learning overview page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/overview')
+      .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -39,9 +42,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning guidelines page',function(done) {
+  it('should show the Learning guidelines page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -50,9 +53,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning schedule page',function(done) {
+  it('should show the Learning schedule page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/schedule')
+      .url(baseUrl+'/about/schedule')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -61,9 +64,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning benefactors page',function(done) {
+  it('should show the Learning benefactors page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/benefactors')
+      .url(baseUrl+'/about/benefactors')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-benefactors',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -72,9 +75,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning staff page',function(done) {
+  it('should show the Learning staff page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/staff')
+      .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -83,9 +86,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning individual staff page',function(done) {
+  it('should show the Learning individual staff page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/shannon-smith')
+      .url(baseUrl+'/about/staff/shannon-smith')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-staff--shannon-smith',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -94,9 +97,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning about XPRIZE page',function(done) {
+  it('should show the Learning about XPRIZE page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/xprize')
+      .url(baseUrl+'/about/xprize')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-xprize',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -105,9 +108,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning partners and supporters page',function(done) {
+  it('should show the Learning partners and supporters page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/partners-supporters')
+      .url(baseUrl+'/about/partners-supporters')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-partners-supporters',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -116,9 +119,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning media room page',function(done) {
+  it('should show the Learning media room page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -127,9 +130,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning faq page',function(done) {
+  it('should show the Learning faq page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/faq')
+      .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -138,9 +141,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning contact page',function(done) {
+  it('should show the Learning contact page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'learning--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -151,9 +154,9 @@ describe('XPRIZE Learning Tests', function() {
 
   // News Pages
 
-  it('should show the Learning news page',function(done) {
+  it('should show the Learning news page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'learning--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -162,9 +165,9 @@ describe('XPRIZE Learning Tests', function() {
       .call(done);
   });
 
-  it('should show the Learning news article page',function(done) {
+  it('should show the Learning news article page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'news/xprize-gets-funny')
+      .url(baseUrl+'/news/xprize-gets-funny')
       .webdrivercss(appConfig.testName, {
         name: 'learning--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -175,9 +178,9 @@ describe('XPRIZE Learning Tests', function() {
 
   // Teams Pages
 
-  it('should show the Learning teams page',function(done) {
+  it('should show the Learning teams page @competition @learning',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'learning--teams',
         remove: ['#mini-panel-footer_section'],
@@ -188,7 +191,7 @@ describe('XPRIZE Learning Tests', function() {
 
   // Get Involved Pages
 
-  it('should show the Learning get involved page',function(done) {
+  it('should show the Learning get involved page @competition @learning',function(done) {
     client
       .url(appConfig.mkey + 'get-involved')
       .webdrivercss(appConfig.testName, {

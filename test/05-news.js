@@ -2,9 +2,12 @@
 
 var appConfig = require('appConfig');
 
+var baseUrl = process.env.BASE_URL ? 'http://'+process.env.BASE_URL : 'http://xprize.org';
+
 describe('XPRIZE News Tests', function() {
 
     this.timeout(99999999);
+    this.slow(10000);
     var client = {};
 
     before(function(done){
@@ -15,9 +18,9 @@ describe('XPRIZE News Tests', function() {
         appConfig.shoovWebdrivercss.after(done);
     });
 
-    it('should show the news page',function(done) {
+    it('should show the news page @main @news',function(done) {
         client
-            .url(appConfig.mkey+'news')
+            .url(baseUrl+'/news')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news',
                 remove: ['#mini-panel-footer_section'],
@@ -26,9 +29,9 @@ describe('XPRIZE News Tests', function() {
             .call(done);
     });
 
-    it('should show the news: press release page',function(done) {
+    it('should show the news: press release page @main @news',function(done) {
         client
-            .url(appConfig.mkey+'press-release/disney-and-xprize-select-winning-innovators-of-tomorrow')
+            .url(baseUrl+'/press-release/disney-and-xprize-select-winning-innovators-of-tomorrow')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--press-release--disney-and-xprize',
                 remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -37,9 +40,9 @@ describe('XPRIZE News Tests', function() {
             .call(done);
     });
 
-    it('should show the news: article page',function(done) {
+    it('should show the news: article page @main @news',function(done) {
         client
-            .url(appConfig.mkey+'news/can-your-city-commit-100-renewable-energy')
+            .url(baseUrl+'/news/can-your-city-commit-100-renewable-energy')
             .webdrivercss(appConfig.testName, {
                 name: 'xprize--news--can-your-city-commit',
                 remove: ['#mini-panel-footer_section','.social-stream__status','.pane-disqus-disqus-comments'],

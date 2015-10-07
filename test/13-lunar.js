@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('lunar');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://lunar.'+process.env.BASE_URL : 'http://lunar.xprize.org';
 
 describe('XPRIZE Google Lunar Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -17,7 +20,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar front page',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -30,7 +33,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar overview page',function(done) {
     client
-      .url(appConfig.mkey+'about/overview')
+      .url(baseUrl+'/about/overview')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -41,7 +44,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar why the moon page',function(done) {
     client
-      .url(appConfig.mkey+'about/why-the-moon')
+      .url(baseUrl+'/about/why-the-moon')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-why-the-moon',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -52,7 +55,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar the space race page',function(done) {
     client
-      .url(appConfig.mkey+'about/the-new-space-race')
+      .url(baseUrl+'/about/the-new-space-race')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-the-new-space-race',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -63,7 +66,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar guidelines page',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -74,7 +77,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar milestone prizes page',function(done) {
     client
-      .url(appConfig.mkey+'about/milestone-prizes')
+      .url(baseUrl+'/about/milestone-prizes')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-milestone-prizes',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -85,7 +88,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar staff page',function(done) {
     client
-      .url(appConfig.mkey+'about/staff')
+      .url(baseUrl+'/about/staff')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -96,7 +99,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar individual staff page',function(done) {
     client
-      .url(appConfig.mkey+'about/staff/andrew-barton')
+      .url(baseUrl+'/about/staff/andrew-barton')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-staff--andrew-barton',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -107,7 +110,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar judges page',function(done) {
     client
-      .url(appConfig.mkey+'about/judges')
+      .url(baseUrl+'/about/judges')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-judges',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -118,7 +121,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar media room page',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -129,7 +132,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar faq page',function(done) {
     client
-      .url(appConfig.mkey+'about/faq')
+      .url(baseUrl+'/about/faq')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -140,7 +143,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar contact page',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -153,7 +156,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar news page',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -164,7 +167,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar news article page',function(done) {
     client
-      .url(appConfig.mkey+'news/audi-ag-supports-part-time-scientists')
+      .url(baseUrl+'/news/audi-ag-supports-part-time-scientists')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -176,7 +179,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the news: lunar blog article page',function(done) {
     client
-      .url(appConfig.mkey+'news/blog/kaunertal-then-moon-august-alps-test-puli')
+      .url(baseUrl+'/news/blog/kaunertal-then-moon-august-alps-test-puli')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--news--blog--kaunertal',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.pane-disqus-disqus-comments'],
@@ -189,7 +192,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar teams page',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -200,7 +203,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar teams about first',function(done) {
     client
-      .url(appConfig.mkey+'teams/team-spaceil')
+      .url(baseUrl+'/teams/team-spaceil')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-about-first',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -211,7 +214,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar teams about second',function(done) {
     client
-      .url(appConfig.mkey+'teams/astrobotic')
+      .url(baseUrl+'/teams/astrobotic')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-about-second',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -222,7 +225,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar teams blog page',function(done) {
     client
-      .url(appConfig.mkey+'teams/astrobotic/blog')
+      .url(baseUrl+'/teams/astrobotic/blog')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-blog',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -233,7 +236,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar teams individual blog page',function(done) {
     client
-      .url(appConfig.mkey+'teams/blog')
+      .url(baseUrl+'/teams/blog')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-blog--individual',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.team-about__individual-news'],
@@ -244,7 +247,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar teams video page',function(done) {
     client
-      .url(appConfig.mkey+'teams/astrobotic/videos')
+      .url(baseUrl+'/teams/astrobotic/videos')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-videos',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -257,7 +260,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar education page',function(done) {
     client
-      .url(appConfig.mkey+'education')
+      .url(baseUrl+'/education')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -268,7 +271,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar moonbots page',function(done) {
     client
-      .url(appConfig.mkey+'education/moonbots')
+      .url(baseUrl+'/education/moonbots')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-moonbots',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -279,7 +282,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar fulldome planetarium page',function(done) {
     client
-      .url(appConfig.mkey+'education/domeshow')
+      .url(baseUrl+'/education/domeshow')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -290,7 +293,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar fulldome planetarium licensing page',function(done) {
     client
-      .url(appConfig.mkey+'education/domeshow-licensing')
+      .url(baseUrl+'/education/domeshow-licensing')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow-licensing',
         remove: ['#mini-panel-footer_section'],
@@ -301,7 +304,7 @@ describe('XPRIZE Google Lunar Tests', function() {
 
   it('should show the Google Lunar fulldome planetarium marketing page',function(done) {
     client
-      .url(appConfig.mkey+'education/dome-show-press-kit')
+      .url(baseUrl+'/education/dome-show-press-kit')
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow-marketing',
         remove: ['#mini-panel-footer_section','.social-stream__status'],

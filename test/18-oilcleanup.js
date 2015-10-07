@@ -1,10 +1,13 @@
 'use strict';
 
-var appConfig = require('oilcleanup');
+var appConfig = require('appConfig');
+
+var baseUrl = process.env.BASE_URL ? 'http://oilcleanup.'+process.env.BASE_URL : 'http://oilcleanup.xprize.org';
 
 describe('XPRIZE Oil Cleanup Tests', function() {
 
   this.timeout(99999999);
+  this.slow(10000);
   var client = {};
 
   before(function(done){
@@ -17,7 +20,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup front page',function(done) {
     client
-      .url(appConfig.mkey)
+      .url(baseUrl)
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -30,7 +33,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup guidelines page',function(done) {
     client
-      .url(appConfig.mkey+'about/guidelines')
+      .url(baseUrl+'/about/guidelines')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -41,7 +44,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup judges page',function(done) {
     client
-      .url(appConfig.mkey+'about/judges')
+      .url(baseUrl+'/about/judges')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-judges',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -52,7 +55,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup Wendy Schmidt page',function(done) {
     client
-      .url(appConfig.mkey+'about/wendy-schmidt')
+      .url(baseUrl+'/about/wendy-schmidt')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-wendy-schmidt',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -63,7 +66,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup partners and supporters page',function(done) {
     client
-      .url(appConfig.mkey+'about/partners-supporters')
+      .url(baseUrl+'/about/partners-supporters')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-partners-supporters',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
@@ -74,7 +77,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup media room page',function(done) {
     client
-      .url(appConfig.mkey+'about/media-room')
+      .url(baseUrl+'/about/media-room')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
@@ -85,7 +88,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup contact page',function(done) {
     client
-      .url(appConfig.mkey+'about/contact')
+      .url(baseUrl+'/about/contact')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--about-contact',
         remove: ['#mini-panel-footer_section'],
@@ -98,7 +101,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup news page',function(done) {
     client
-      .url(appConfig.mkey+'news')
+      .url(baseUrl+'/news')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
@@ -109,7 +112,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup news article page',function(done) {
     client
-      .url(appConfig.mkey+'press-release/xprize-benefit-celebrates-innovation-oil-cleanup-sets-sights-breakthroughs')
+      .url(baseUrl+'/press-release/xprize-benefit-celebrates-innovation-oil-cleanup-sets-sights-breakthroughs')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
@@ -122,7 +125,7 @@ describe('XPRIZE Oil Cleanup Tests', function() {
 
   it('should show the Oil Cleanup teams page',function(done) {
     client
-      .url(appConfig.mkey+'teams')
+      .url(baseUrl+'/teams')
       .webdrivercss(appConfig.testName, {
         name: 'oilcleanup--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
