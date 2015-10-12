@@ -24,6 +24,7 @@ describe('XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'header',
         elem: '#main-navigation'
+        //screenWidth: appConfig.caps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -34,6 +35,7 @@ describe('XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'footer',
         elem: '#mini-panel-footer_section'
+        //screenWidth: appConfig.caps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

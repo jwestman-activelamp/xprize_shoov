@@ -24,7 +24,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -37,7 +38,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -48,7 +50,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -59,7 +62,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -70,7 +74,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-benefactors',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -81,7 +86,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -92,7 +98,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-staff--jennifer-bravo',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -103,7 +110,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-xprize',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -114,7 +122,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
-        exclude: ['.latest-news--list']
+        exclude: ['.latest-news--list'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -125,7 +134,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -136,7 +146,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--about-contact',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#mini-panel-footer_section']
+        exclude: ['#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -149,7 +160,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -160,7 +172,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['.social-stream__status', '.related-post__block .related-posts__image'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -173,7 +186,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--teams',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#mini-panel-footer_section']
+        exclude: ['#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -186,7 +200,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--get-involved',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -197,7 +212,8 @@ describe('XPRIZE Adult Literacy Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'adult-literacy--get-involved--think-tank',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['.social-stream__status']
+        exclude: ['.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

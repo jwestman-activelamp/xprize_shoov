@@ -24,7 +24,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -37,7 +38,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -48,7 +50,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -59,7 +62,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -70,7 +74,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -81,7 +86,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-staff--paul-bunje',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -92,7 +98,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-judges',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -103,7 +110,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-scientific-advisory-board',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -114,7 +122,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-wendy-schmidt',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -125,7 +134,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-partners-supporters',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -136,7 +146,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
-        exclude: ['#main-navigation','.latest-news--list']
+        exclude: ['#main-navigation','.latest-news--list'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -147,7 +158,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -158,7 +170,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--about-contact',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -171,7 +184,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -182,7 +196,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -195,7 +210,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -206,7 +222,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--teams-about-first',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -217,7 +234,8 @@ describe('XPRIZE Ocean Health Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'oceanhealth--teams-about-second',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

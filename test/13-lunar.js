@@ -24,7 +24,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -37,7 +38,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -48,7 +50,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-why-the-moon',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -59,7 +62,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-the-new-space-race',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -70,7 +74,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -81,7 +86,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-milestone-prizes',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -92,7 +98,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -103,7 +110,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-staff--andrew-barton',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -114,7 +122,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-judges',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -125,7 +134,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
-        exclude: ['#main-navigation','.latest-news--list']
+        exclude: ['#main-navigation','.latest-news--list'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -136,7 +146,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -147,7 +158,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--about-contact',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -160,7 +172,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -171,7 +184,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -183,7 +197,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--news--blog--kaunertal',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments']
+        exclude: ['#main-navigation','.related-post__block','.social-stream__status', '.pane-disqus-disqus-comments'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -196,7 +211,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status','.team-directory--top-three .team-directory__block'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -207,7 +223,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-about-first',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -218,7 +235,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-about-second',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -229,7 +247,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-blog',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -240,7 +259,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-blog--individual',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.team-about__individual-news'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -251,7 +271,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--teams-videos',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -264,7 +285,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -275,7 +297,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-moonbots',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -286,7 +309,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation']
+        exclude: ['#main-navigation'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -297,7 +321,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow-licensing',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -308,7 +333,8 @@ describe('XPRIZE Google Lunar Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'google-lunar--education-domeshow-marketing',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

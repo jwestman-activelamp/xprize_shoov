@@ -24,7 +24,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -37,7 +38,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
-        exclude: ['#main-navigation','.latest-news--list']
+        exclude: ['#main-navigation','.latest-news--list'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -48,7 +50,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--about-contact',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -61,7 +64,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -72,7 +76,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -85,7 +90,8 @@ describe('XPRIZE Northrop Grumman Lunar Lander Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'lunarlander--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

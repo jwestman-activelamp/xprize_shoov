@@ -25,6 +25,7 @@ describe('XPRIZE Tests', function() {
         name: 'xprize',
         remove: ['#mini-panel-footer_section','.social-stream__status','.prizes--list__leaderboard .latest-news--list'],
         exclude: ['#main-navigation','.hero-slider__img','.views-field-field-hero-image','.whats-new__story-block--basic','.prizes--list__leaderboard .latest-news--list','.pds-question-top', '.pds-answer-span','.social-stream__status', '.media-mentions']
+        //screenWidth: [400, 1024, 2240]
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

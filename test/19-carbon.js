@@ -24,7 +24,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -37,7 +38,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -48,7 +50,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -59,7 +62,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -70,7 +74,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-sponsors',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -81,7 +86,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -92,7 +98,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-staff--paul-bunje',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -103,7 +110,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-xprize',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -114,7 +122,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
-        exclude: ['#main-navigation','.latest-news--list']
+        exclude: ['#main-navigation','.latest-news--list'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -125,7 +134,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -136,7 +146,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--about-contact',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation','#mini-panel-footer_section']
+        exclude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -149,7 +160,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -160,7 +172,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -173,7 +186,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exlcude: ['#main-navigation','#mini-panel-footer_section']
+        exlcude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -186,7 +200,8 @@ describe('XPRIZE NRG Cosia Carbon XPRIZE Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'carbon--get-involved',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exlcude: ['#main-navigation','#mini-panel-footer_section']
+        exlcude: ['#main-navigation','#mini-panel-footer_section'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });

@@ -24,7 +24,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions']
+        exclude: ['#main-navigation','.view-competition-hero-slideshow','.latest-news__story-block--featured','.latest-news__story-block--basic','.social-stream__status', '.media-mentions'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -37,7 +38,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-overview',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -48,7 +50,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-guidelines',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -59,7 +62,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-schedule',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -70,7 +74,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-staff',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -81,7 +86,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-staff--grant-campany',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -92,7 +98,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-judges-competition-1',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -103,7 +110,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-judges-competition-2',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -114,7 +122,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-scientific-advisory-board',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -125,7 +134,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-nokia',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -136,7 +146,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-partners',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -147,7 +158,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-media-room',
         remove: ['#mini-panel-footer_section','.latest-news--list'],
-        exclude: ['#main-navigation','.latest-news--list']
+        exclude: ['#main-navigation','.latest-news--list'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -158,7 +170,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-faq',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -169,7 +182,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--about-contact',
         remove: ['#mini-panel-footer_section'],
-        exclude: ['#main-navigation']
+        exclude: ['#main-navigation'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -182,7 +196,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--news',
         remove: ['#mini-panel-footer_section','#news-items','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -193,7 +208,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--news-article',
         remove: ['#mini-panel-footer_section','.social-stream__status', '.related-post__block .views-field-title', '.pane-disqus-disqus-comments'],
-        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image']
+        exclude: ['#main-navigation','.social-stream__status', '.related-post__block .related-posts__image'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -206,7 +222,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -217,7 +234,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams-about-gold',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -228,7 +246,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams-about-silver',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -239,7 +258,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-1-teams-about-regular',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -250,7 +270,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -261,7 +282,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams-about-gold',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -272,7 +294,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams-about-silver',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
@@ -283,7 +306,8 @@ describe('XPRIZE Nokia Sensing Tests', function() {
       .webdrivercss(appConfig.testName, {
         name: 'nokia-sensing--teams-competition-2-teams-about-regular',
         remove: ['#mini-panel-footer_section','.social-stream__status'],
-        exclude: ['#main-navigation','.social-stream__status']
+        exclude: ['#main-navigation','.social-stream__status'],
+        screenWidth: selectedCaps == 'chrome' ? [400, 1024, 2240] : undefined
       }, appConfig.shoovWebdrivercss.processResults)
       .call(done);
   });
